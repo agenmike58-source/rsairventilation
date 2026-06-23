@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="fr-CA">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Page introuvable — Ventilation R.S. Air Inc.</title>
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+  <link rel="manifest" href="site.webmanifest">
+  <meta name="theme-color" content="#1c1410">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+  <style>
+    :root {
+      --bg:#1c1410;--surface:#241a13;--card:#2e2218;
+      --border:#3d2e22;--copper:#b87333;--copper-lt:#d4904a;--copper-dim:#8a5520;
+      --cream:#f0e8d8;--cream-dim:#c8bca8;--text:#f0e8d8;--text-muted:#9a8a78;--text-dim:#6a5a4a;
+    }
+    html,body{height:100%;margin:0;}
+    body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--text);display:flex;flex-direction:column;min-height:100vh;}
+    .main{flex:1;display:flex;align-items:center;justify-content:center;padding:4rem 2rem;position:relative;overflow:hidden;}
+    .main::before{
+      content:'404';
+      position:absolute;
+      font-family:'Space Grotesk',sans-serif;
+      font-size:28vw;
+      font-weight:700;
+      color:transparent;
+      -webkit-text-stroke:1px rgba(61,46,34,0.35);
+      pointer-events:none;
+      user-select:none;
+      top:50%;
+      left:50%;
+      transform:translate(-50%,-50%);
+      z-index:0;
+      white-space:nowrap;
+    }
+    .content{position:relative;z-index:1;text-align:center;max-width:500px;}
+    .error-badge{display:inline-flex;align-items:center;gap:0.5rem;background:rgba(184,115,51,0.1);border:1px solid var(--copper-dim);border-radius:9999px;padding:0.35rem 1rem;font-family:'Space Grotesk',sans-serif;font-size:0.75rem;font-weight:600;color:var(--copper);letter-spacing:0.08em;text-transform:uppercase;margin-bottom:2rem;}
+    h1{font-family:'Space Grotesk',sans-serif;font-size:clamp(1.75rem,4vw,2.5rem);font-weight:700;color:var(--cream);letter-spacing:-0.02em;margin-bottom:1rem;line-height:1.15;}
+    p{font-size:0.95rem;color:var(--cream-dim);line-height:1.75;margin-bottom:2.5rem;}
+    .btn-group{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;}
+    .btn-primary{display:inline-flex;align-items:center;gap:0.6rem;background:var(--copper);color:var(--bg);font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:0.9rem;padding:0.85rem 1.75rem;border-radius:6px;text-decoration:none;transition:background 0.2s,transform 0.15s;}
+    .btn-primary:hover{background:var(--copper-lt);transform:translateY(-1px);}
+    .btn-secondary{display:inline-flex;align-items:center;gap:0.6rem;background:transparent;color:var(--cream-dim);font-family:'Space Grotesk',sans-serif;font-weight:500;font-size:0.9rem;padding:0.85rem 1.75rem;border-radius:6px;border:1px solid var(--border);text-decoration:none;transition:all 0.2s;}
+    .btn-secondary:hover{border-color:var(--copper-dim);color:var(--cream);}
+    .quick-links{margin-top:3rem;padding-top:2rem;border-top:1px solid var(--border);}
+    .quick-links-title{font-family:'Space Grotesk',sans-serif;font-size:0.72rem;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:var(--text-dim);margin-bottom:1rem;}
+    .quick-link{display:inline-flex;align-items:center;gap:0.4rem;font-size:0.85rem;color:var(--text-muted);text-decoration:none;margin:0 0.5rem;transition:color 0.2s;}
+    .quick-link:hover{color:var(--copper-lt);}
+    footer{text-align:center;padding:1.5rem;border-top:1px solid var(--border);background:var(--surface);}
+    footer a{font-size:0.78rem;color:var(--text-dim);text-decoration:none;margin:0 0.75rem;transition:color 0.2s;}
+    footer a:hover{color:var(--cream-dim);}
+    footer span{font-size:0.75rem;color:var(--text-dim);}
+  </style>
+</head>
+<body>
+
+<main class="main" role="main">
+  <div class="content">
+    <div class="error-badge">
+      <i data-lucide="alert-triangle" aria-hidden="true" style="width:13px;height:13px;"></i>
+      Erreur 404
+    </div>
+    <h1>Cette page n'existe pas</h1>
+    <p>La page que vous cherchez a peut-être été déplacée ou supprimée. Retournez à l'accueil ou utilisez les liens ci-dessous pour trouver ce dont vous avez besoin.</p>
+    <div class="btn-group">
+      <a href="index.html" class="btn-primary">
+        <i data-lucide="home" aria-hidden="true" style="width:16px;height:16px;"></i>
+        Retour à l'accueil
+      </a>
+      <a href="contact.html" class="btn-secondary">Nous contacter</a>
+    </div>
+    <div class="quick-links">
+      <div class="quick-links-title">Pages principales</div>
+      <a href="services.html" class="quick-link">
+        <i data-lucide="wind" aria-hidden="true" style="width:13px;height:13px;"></i>
+        Services
+      </a>
+      <a href="realisations.html" class="quick-link">
+        <i data-lucide="image" aria-hidden="true" style="width:13px;height:13px;"></i>
+        Réalisations
+      </a>
+      <a href="a-propos.html" class="quick-link">
+        <i data-lucide="users" aria-hidden="true" style="width:13px;height:13px;"></i>
+        À propos
+      </a>
+      <a href="portail.html" class="quick-link">
+        <i data-lucide="log-in" aria-hidden="true" style="width:13px;height:13px;"></i>
+        Portail client
+      </a>
+    </div>
+  </div>
+</main>
+
+<footer role="contentinfo">
+  <a href="index.html">Accueil</a>
+  <a href="services.html">Services</a>
+  <a href="contact.html">Contact</a>
+  <span>© 2026 Ventilation R.S. Air Inc.</span>
+</footer>
+
+<script>lucide.createIcons();</script>
+</body>
+</html>

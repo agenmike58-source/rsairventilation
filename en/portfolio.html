@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio — Ventilation R.S. Air Inc. | Commercial Ventilation Projects South Shore</title>
+  <meta name="description" content="Browse our commercial and residential ventilation projects on the South Shore of Montreal: restaurant hoods, rooftop units, heat pumps and more. 40 years of completed work.">
+  <link rel="canonical" href="https://www.rsairventilation.com/en/portfolio.html">
+  <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+  <link rel="manifest" href="../site.webmanifest">
+  <meta name="theme-color" content="#1c1410">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.rsairventilation.com/en/portfolio.html">
+  <meta property="og:title" content="Portfolio — Ventilation R.S. Air Inc.">
+  <meta property="og:description" content="Portfolio of commercial and residential ventilation projects on the South Shore since 1985.">
+  <meta property="og:image" content="https://www.rsairventilation.com/images/og-image.png">
+  <meta property="og:locale" content="en_CA">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://www.rsairventilation.com/images/og-image.png">
+  <link rel="alternate" hreflang="fr-CA" href="https://www.rsairventilation.com/realisations.html">
+  <link rel="alternate" hreflang="en-CA" href="https://www.rsairventilation.com/en/portfolio.html">
+  <link rel="alternate" hreflang="x-default" href="https://www.rsairventilation.com/realisations.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js"></script>
+
+  <style>
+    :root {
+      --bg:#1c1410;--surface:#241a13;--card:#2e2218;--card-hover:#382a1f;
+      --border:#3d2e22;--copper:#b87333;--copper-lt:#d4904a;--copper-dim:#8a5520;
+      --cream:#f0e8d8;--cream-dim:#c8bca8;--text:#f0e8d8;--text-muted:#9a8a78;--text-dim:#6a5a4a;
+    }
+    html{scroll-behavior:smooth;}
+    body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--text);overflow-x:hidden;}
+    .font-display{font-family:'Space Grotesk',sans-serif;}
+
+    #nav-pill{position:fixed;top:1.5rem;left:50%;transform:translateX(-50%);z-index:100;background:rgba(28,20,16,0.6);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border:1px solid var(--border);border-radius:9999px;padding:0.5rem 1.25rem;display:flex;align-items:center;gap:0;transition:background 0.3s,border-color 0.3s;white-space:nowrap;}
+    #nav-pill.scrolled{background:rgba(28,20,16,0.95);border-color:var(--copper-dim);}
+    .nav-link{font-family:'Space Grotesk',sans-serif;font-size:0.82rem;font-weight:500;letter-spacing:0.03em;color:var(--cream-dim);padding:0.4rem 0.85rem;border-radius:9999px;text-decoration:none;transition:color 0.2s,background 0.2s;}
+    .nav-link:hover,.nav-link.active{color:var(--cream);background:rgba(184,115,51,0.15);}
+    .nav-cta{background:var(--copper);color:var(--bg)!important;font-weight:600;margin-left:0.5rem;}
+    .nav-cta:hover{background:var(--copper-lt)!important;}
+    .nav-logo{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:0.9rem;color:var(--cream);margin-right:0.75rem;}
+    .nav-logo span{color:var(--copper);}
+    .nav-sep{width:1px;height:18px;background:var(--border);margin:0 0.25rem;}
+    .lang-btn{font-family:'Space Grotesk',sans-serif;font-size:0.75rem;font-weight:600;letter-spacing:0.05em;padding:0.25rem 0.5rem;border-radius:4px;text-decoration:none;transition:all 0.2s;}
+    .lang-btn.active{color:var(--copper);background:rgba(184,115,51,0.12);}
+    .lang-btn:not(.active){color:var(--text-muted);}
+    #mobile-menu{display:none;position:fixed;inset:0;z-index:99;background:var(--bg);padding:5rem 2rem 2rem;flex-direction:column;gap:1.5rem;}
+    #mobile-menu.open{display:flex;}
+    .mobile-nav-link{font-family:'Space Grotesk',sans-serif;font-size:1.5rem;font-weight:600;color:var(--cream-dim);text-decoration:none;border-bottom:1px solid var(--border);padding-bottom:1.25rem;}
+    #hamburger{display:none;background:none;border:none;cursor:pointer;color:var(--cream);margin-left:0.5rem;}
+    @media(max-width:900px){#nav-links{display:none;}#hamburger{display:flex;}#nav-pill{padding:0.5rem 1rem;}}
+
+    .page-header{padding:10rem 5rem 5rem;background:var(--surface);border-bottom:1px solid var(--border);position:relative;overflow:hidden;}
+    .page-header::before{content:'';position:absolute;top:0;left:0;right:0;bottom:0;background:radial-gradient(ellipse at 30% 60%,rgba(184,115,51,0.06) 0%,transparent 70%);pointer-events:none;}
+    .page-breadcrumb{font-family:'Space Grotesk',sans-serif;font-size:0.75rem;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;color:var(--text-dim);margin-bottom:1.25rem;display:flex;align-items:center;gap:0.5rem;}
+    .page-breadcrumb a{color:var(--text-dim);text-decoration:none;}
+    .page-title{font-family:'Space Grotesk',sans-serif;font-size:clamp(2.5rem,5vw,3.5rem);font-weight:700;color:var(--cream);letter-spacing:-0.02em;line-height:1.1;margin-bottom:1.25rem;}
+    .page-title em{font-style:normal;color:var(--copper);}
+    .page-sub{font-size:1.05rem;color:var(--cream-dim);line-height:1.75;max-width:560px;}
+    .section-label{font-family:'Space Grotesk',sans-serif;font-size:0.72rem;font-weight:600;letter-spacing:0.15em;text-transform:uppercase;color:var(--copper);margin-bottom:0.5rem;display:flex;align-items:center;gap:0.75rem;}
+    .section-label::after{content:'';display:block;width:30px;height:1px;background:var(--copper-dim);}
+
+    .filter-bar{padding:2rem 5rem;background:var(--bg);border-bottom:1px solid var(--border);display:flex;align-items:center;gap:0.75rem;flex-wrap:wrap;}
+    .filter-btn{font-family:'Space Grotesk',sans-serif;font-size:0.8rem;font-weight:500;padding:0.45rem 1rem;border-radius:9999px;border:1px solid var(--border);background:transparent;color:var(--text-muted);cursor:pointer;transition:all 0.2s;}
+    .filter-btn:hover{border-color:var(--copper-dim);color:var(--cream-dim);}
+    .filter-btn.active{background:var(--copper);border-color:var(--copper);color:var(--bg);font-weight:600;}
+    .filter-label{font-family:'Space Grotesk',sans-serif;font-size:0.75rem;color:var(--text-dim);letter-spacing:0.08em;text-transform:uppercase;margin-right:0.5rem;}
+
+    .gallery-section{padding:4rem 5rem 6rem;}
+    .gallery-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5px;background:var(--border);}
+    .gallery-card{background:var(--card);overflow:hidden;position:relative;cursor:pointer;aspect-ratio:4/3;}
+    .gallery-card.large{grid-column:span 2;aspect-ratio:16/7;}
+    .gallery-card img{width:100%;height:100%;object-fit:cover;transition:transform 0.5s ease,opacity 0.3s;opacity:0.7;}
+    .gallery-card:hover img{transform:scale(1.05);opacity:0.9;}
+    .gallery-overlay{position:absolute;inset:0;padding:1.5rem;display:flex;flex-direction:column;justify-content:flex-end;background:linear-gradient(to top,rgba(28,20,16,0.88) 0%,transparent 55%);opacity:0;transition:opacity 0.3s;}
+    .gallery-card:hover .gallery-overlay{opacity:1;}
+    .gallery-card-title{font-family:'Space Grotesk',sans-serif;font-size:1rem;font-weight:600;color:var(--cream);margin-bottom:0.3rem;}
+    .gallery-card-meta{display:flex;gap:0.75rem;align-items:center;}
+    .gallery-card-tag{font-size:0.72rem;color:var(--copper-lt);letter-spacing:0.05em;}
+    .gallery-card-loc{font-size:0.72rem;color:var(--cream-dim);}
+    .gallery-card-badge{position:absolute;top:1rem;left:1rem;background:rgba(28,20,16,0.75);backdrop-filter:blur(6px);border:1px solid rgba(184,115,51,0.3);border-radius:4px;padding:0.25rem 0.6rem;font-family:'Space Grotesk',sans-serif;font-size:0.68rem;font-weight:600;color:var(--copper-lt);letter-spacing:0.06em;text-transform:uppercase;}
+
+    #lightbox{display:none;position:fixed;inset:0;z-index:200;background:rgba(28,20,16,0.96);align-items:center;justify-content:center;padding:2rem;}
+    #lightbox.open{display:flex;}
+    .lightbox-inner{max-width:900px;width:100%;position:relative;}
+    .lightbox-img{width:100%;max-height:75vh;object-fit:contain;border-radius:4px;}
+    .lightbox-info{margin-top:1rem;}
+    .lightbox-title{font-family:'Space Grotesk',sans-serif;font-size:1.1rem;font-weight:600;color:var(--cream);}
+    .lightbox-meta{font-size:0.85rem;color:var(--text-muted);margin-top:0.25rem;}
+    .lightbox-close{position:absolute;top:-2.5rem;right:0;background:none;border:none;color:var(--cream-dim);cursor:pointer;font-size:1.25rem;}
+    .lightbox-nav{position:absolute;top:50%;transform:translateY(-50%);background:rgba(28,20,16,0.7);border:1px solid var(--border);color:var(--cream);width:44px;height:44px;border-radius:50%;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all 0.2s;}
+    .lightbox-nav:hover{background:var(--copper);border-color:var(--copper);}
+    .lightbox-prev{left:-3rem;}
+    .lightbox-next{right:-3rem;}
+
+    .stats-strip{padding:4rem 5rem;background:var(--surface);border-top:1px solid var(--border);border-bottom:1px solid var(--border);display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--border);}
+    .stat-block{background:var(--surface);padding:2.5rem;text-align:center;}
+    .stat-big{font-family:'Space Grotesk',sans-serif;font-size:3rem;font-weight:700;color:var(--copper);line-height:1;}
+    .stat-label{font-family:'Space Grotesk',sans-serif;font-size:0.78rem;font-weight:500;letter-spacing:0.08em;text-transform:uppercase;color:var(--text-muted);margin-top:0.5rem;}
+
+    .btn-primary{display:inline-flex;align-items:center;gap:0.6rem;background:var(--copper);color:var(--bg);font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:0.9rem;padding:0.85rem 1.75rem;border-radius:6px;text-decoration:none;transition:background 0.2s,transform 0.15s;}
+    .btn-primary:hover{background:var(--copper-lt);transform:translateY(-1px);}
+    .btn-secondary{display:inline-flex;align-items:center;gap:0.6rem;background:transparent;color:var(--cream-dim);font-family:'Space Grotesk',sans-serif;font-weight:500;font-size:0.9rem;padding:0.85rem 1.75rem;border-radius:6px;border:1px solid var(--border);text-decoration:none;transition:all 0.2s;}
+    .btn-secondary:hover{border-color:var(--copper-dim);color:var(--cream);}
+
+    footer{background:var(--surface);border-top:1px solid var(--border);padding:4rem 5rem 2rem;}
+    .footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:3rem;margin-bottom:3rem;}
+    .footer-col-title{font-family:'Space Grotesk',sans-serif;font-size:0.78rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--copper);margin-bottom:1.25rem;}
+    .footer-link{display:block;font-size:0.875rem;color:var(--text-muted);text-decoration:none;margin-bottom:0.6rem;transition:color 0.2s;}
+    .footer-link:hover{color:var(--cream);}
+    .footer-contact-item{display:flex;align-items:flex-start;gap:0.6rem;font-size:0.85rem;color:var(--text-muted);margin-bottom:0.75rem;line-height:1.5;}
+    .footer-contact-item i{color:var(--copper);flex-shrink:0;margin-top:2px;width:14px;height:14px;}
+    .footer-bottom{border-top:1px solid var(--border);padding-top:1.5rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:0.75rem;}
+    .footer-copy{font-size:0.78rem;color:var(--text-dim);}
+    .rbq-badge{display:inline-flex;align-items:center;gap:0.5rem;background:rgba(184,115,51,0.08);border:1px solid var(--copper-dim);border-radius:4px;padding:0.35rem 0.75rem;font-family:'Space Grotesk',sans-serif;font-size:0.72rem;font-weight:600;color:var(--copper-lt);letter-spacing:0.05em;}
+
+    .reveal{opacity:0;transform:translateY(20px);}
+
+    @media(max-width:1024px){
+      .page-header{padding:8rem 2rem 3.5rem;}
+      .filter-bar{padding:1.5rem 2rem;}
+      .gallery-section{padding:3rem 2rem 4rem;}
+      .gallery-grid{grid-template-columns:1fr 1fr;}
+      .gallery-card.large{grid-column:span 2;}
+      .stats-strip{grid-template-columns:repeat(2,1fr);}
+      footer{padding:3rem 2rem 1.5rem;}
+      .footer-grid{grid-template-columns:1fr 1fr;gap:2rem;}
+      .lightbox-prev{left:-0.5rem;}
+      .lightbox-next{right:-0.5rem;}
+    }
+    @media(max-width:640px){
+      .gallery-grid{grid-template-columns:1fr;}
+      .gallery-card.large{grid-column:span 1;}
+      .stats-strip{grid-template-columns:1fr 1fr;}
+      .footer-grid{grid-template-columns:1fr;}
+    }
+  </style>
+</head>
+<body>
+
+<nav id="nav-pill" role="navigation" aria-label="Main navigation">
+  <a href="index.html" class="nav-logo">RS<span>AIR</span></a>
+  <div class="nav-sep"></div>
+  <div id="nav-links" style="display:flex;align-items:center;gap:0;">
+    <a href="index.html" class="nav-link">Home</a>
+    <a href="services.html" class="nav-link">Services</a>
+    <a href="portfolio.html" class="nav-link active">Portfolio</a>
+    <a href="about.html" class="nav-link">About</a>
+    <a href="contact.html" class="nav-link nav-cta">Get a Quote</a>
+  </div>
+  <div style="display:flex;align-items:center;gap:0.25rem;margin-left:0.75rem;">
+    <div class="nav-sep"></div>
+    <a href="../realisations.html" class="lang-btn" style="margin-left:0.5rem;">FR</a>
+    <a href="portfolio.html" class="lang-btn active">EN</a>
+  </div>
+  <button id="hamburger" aria-label="Menu" onclick="document.getElementById('mobile-menu').classList.toggle('open')">
+    <i data-lucide="menu" aria-hidden="true" style="width:22px;height:22px;"></i>
+  </button>
+</nav>
+
+<div id="mobile-menu">
+  <button onclick="document.getElementById('mobile-menu').classList.remove('open')" style="position:absolute;top:1.5rem;right:1.5rem;background:none;border:none;color:var(--cream);cursor:pointer;">
+    <i data-lucide="x" aria-hidden="true" style="width:24px;height:24px;"></i>
+  </button>
+  <a href="index.html" class="mobile-nav-link">Home</a>
+  <a href="services.html" class="mobile-nav-link">Services</a>
+  <a href="portfolio.html" class="mobile-nav-link">Portfolio</a>
+  <a href="about.html" class="mobile-nav-link">About</a>
+  <a href="contact.html" class="mobile-nav-link" style="border:none;">Get a Quote</a>
+</div>
+
+<header class="page-header">
+  <div class="page-header-inner" style="max-width:700px;">
+    <div class="page-breadcrumb">
+      <a href="index.html">Home</a>
+      <i data-lucide="chevron-right" aria-hidden="true" style="width:12px;height:12px;"></i>
+      Portfolio
+    </div>
+    <h1 class="page-title">Our <em>completed</em><br>ventilation projects</h1>
+    <p class="page-sub">A look at our commercial and residential projects across the South Shore and Greater Montreal — from restaurant kitchen hoods to large commercial rooftop systems.</p>
+  </div>
+</header>
+
+<!-- Stats strip -->
+<div class="stats-strip" role="region" aria-label="Key statistics">
+  <div class="stat-block reveal">
+    <div class="stat-big">500+</div>
+    <div class="stat-label">Projects completed</div>
+  </div>
+  <div class="stat-block reveal">
+    <div class="stat-big">40</div>
+    <div class="stat-label">Years of experience</div>
+  </div>
+  <div class="stat-block reveal">
+    <div class="stat-big">200+</div>
+    <div class="stat-label">Restaurants served</div>
+  </div>
+  <div class="stat-block reveal">
+    <div class="stat-big">South Shore</div>
+    <div class="stat-label">Primary service area</div>
+  </div>
+</div>
+
+<!-- Filter bar -->
+<div class="filter-bar" role="group" aria-label="Filter by category">
+  <span class="filter-label">Filter:</span>
+  <button class="filter-btn active" data-filter="all">All projects</button>
+  <button class="filter-btn" data-filter="restaurant">Restaurants</button>
+  <button class="filter-btn" data-filter="commercial">Commercial</button>
+  <button class="filter-btn" data-filter="residentiel">Residential</button>
+  <button class="filter-btn" data-filter="institutionnel">Institutional</button>
+</div>
+
+<!-- Gallery -->
+<section class="gallery-section" aria-labelledby="gallery-title">
+  <h2 id="gallery-title" class="sr-only">Project gallery</h2>
+  <div class="gallery-grid" id="gallery-grid" role="list">
+
+    <div class="gallery-card large reveal" data-category="restaurant" data-title="Double-island commercial hood" data-meta="Restaurant — Brossard, South Shore · 2025" role="listitem" tabindex="0" aria-label="Double-island commercial hood, Brossard">
+      <img src="../images/project-1.jpg" alt="Installation of a double-island commercial hood in a Brossard restaurant" loading="lazy" width="900" height="394" decoding="async">
+      <div class="gallery-card-badge">Restaurant</div>
+      <div class="gallery-overlay">
+        <div class="gallery-card-title">Double-island commercial hood</div>
+        <div class="gallery-card-meta">
+          <span class="gallery-card-tag">Restaurant</span>
+          <span class="gallery-card-loc">Brossard, South Shore</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="gallery-card reveal" data-category="commercial" data-title="Rooftop RTU units — Shopping centre" data-meta="Commercial — Saint-Lambert · 2024" role="listitem" tabindex="0" aria-label="Rooftop RTU units, Saint-Lambert">
+      <img src="../images/project-2.jpg" alt="Installation of rooftop RTU units on a shopping centre in Saint-Lambert" loading="lazy" width="450" height="338" decoding="async">
+      <div class="gallery-card-badge">Commercial</div>
+      <div class="gallery-overlay">
+        <div class="gallery-card-title">Rooftop RTU units</div>
+        <div class="gallery-card-meta">
+          <span class="gallery-card-tag">Commercial</span>
+          <span class="gallery-card-loc">Saint-Lambert</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="gallery-card reveal" data-category="residentiel" data-title="HRV installation — Single-family home" data-meta="Residential — La Prairie · 2025" role="listitem" tabindex="0" aria-label="Residential HRV, La Prairie">
+      <img src="../images/project-3.jpg" alt="Installation of an HRV air exchanger in a La Prairie home" loading="lazy" width="450" height="338" decoding="async">
+      <div class="gallery-card-badge">Residential</div>
+      <div class="gallery-overlay">
+        <div class="gallery-card-title">HRV air exchanger</div>
+        <div class="gallery-card-meta">
+          <span class="gallery-card-tag">Residential</span>
+          <span class="gallery-card-loc">La Prairie</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="gallery-card reveal" data-category="residentiel" data-title="Daikin multi-split wall heat pump" data-meta="Residential — Candiac · 2025" role="listitem" tabindex="0" aria-label="Daikin multi-split heat pump, Candiac">
+      <img src="../images/project-4.jpg" alt="Installation of a Daikin wall heat pump in a Candiac residence" loading="lazy" width="450" height="338" decoding="async">
+      <div class="gallery-card-badge">Residential</div>
+      <div class="gallery-overlay">
+        <div class="gallery-card-title">Daikin multi-split heat pump</div>
+        <div class="gallery-card-meta">
+          <span class="gallery-card-tag">Residential</span>
+          <span class="gallery-card-loc">Candiac</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="gallery-card reveal" data-category="institutionnel" data-title="Institutional kitchen exhaust system" data-meta="Institutional — Longueuil · 2024" role="listitem" tabindex="0" aria-label="Institutional kitchen exhaust, Longueuil">
+      <img src="../images/project-5.jpg" alt="Exhaust system for an institutional kitchen in Longueuil" loading="lazy" width="450" height="338" decoding="async">
+      <div class="gallery-card-badge">Institutional</div>
+      <div class="gallery-overlay">
+        <div class="gallery-card-title">Institutional kitchen exhaust</div>
+        <div class="gallery-card-meta">
+          <span class="gallery-card-tag">Institutional</span>
+          <span class="gallery-card-loc">Longueuil</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="gallery-card reveal" data-category="restaurant" data-title="High-temperature pizzeria hood" data-meta="Restaurant — Saint-Constant · 2024" role="listitem" tabindex="0" aria-label="Pizzeria hood, Saint-Constant">
+      <img src="../images/project-6.jpg" alt="Ventilation hood for a pizzeria in Saint-Constant" loading="lazy" width="450" height="338" decoding="async">
+      <div class="gallery-card-badge">Restaurant</div>
+      <div class="gallery-overlay">
+        <div class="gallery-card-title">High-temp pizzeria hood</div>
+        <div class="gallery-card-meta">
+          <span class="gallery-card-tag">Restaurant</span>
+          <span class="gallery-card-loc">Saint-Constant</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="gallery-card large reveal" data-category="commercial" data-title="Central heating — Office building Boucherville" data-meta="Commercial — Boucherville · 2023" role="listitem" tabindex="0" aria-label="Central heating office building, Boucherville">
+      <img src="../images/project-7.jpg" alt="Central heating system for an office building in Boucherville" loading="lazy" width="900" height="394" decoding="async">
+      <div class="gallery-card-badge">Commercial</div>
+      <div class="gallery-overlay">
+        <div class="gallery-card-title">Central heating — Office building</div>
+        <div class="gallery-card-meta">
+          <span class="gallery-card-tag">Commercial</span>
+          <span class="gallery-card-loc">Boucherville</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="gallery-card reveal" data-category="restaurant" data-title="Rotisserie exhaust system" data-meta="Restaurant — Delson · 2023" role="listitem" tabindex="0" aria-label="Rotisserie exhaust, Delson">
+      <img src="../images/project-8.jpg" alt="Exhaust system for a commercial rotisserie in Delson" loading="lazy" width="450" height="338" decoding="async">
+      <div class="gallery-card-badge">Restaurant</div>
+      <div class="gallery-overlay">
+        <div class="gallery-card-title">Commercial rotisserie exhaust</div>
+        <div class="gallery-card-meta">
+          <span class="gallery-card-tag">Restaurant</span>
+          <span class="gallery-card-loc">Delson</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="gallery-card reveal" data-category="residentiel" data-title="Furnace and AC replacement" data-meta="Residential — Sainte-Julie · 2024" role="listitem" tabindex="0" aria-label="Furnace and AC, Sainte-Julie">
+      <img src="../images/project-9.jpg" alt="Furnace and air conditioning replacement in Sainte-Julie" loading="lazy" width="450" height="338" decoding="async">
+      <div class="gallery-card-badge">Residential</div>
+      <div class="gallery-overlay">
+        <div class="gallery-card-title">Furnace + AC replacement</div>
+        <div class="gallery-card-meta">
+          <span class="gallery-card-tag">Residential</span>
+          <span class="gallery-card-loc">Sainte-Julie</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- CTA -->
+<section style="padding:6rem 5rem;background:var(--surface);border-top:1px solid var(--border);" aria-labelledby="real-cta-title">
+  <div style="max-width:640px;margin:0 auto;text-align:center;">
+    <div class="section-label" style="justify-content:center;">Your project</div>
+    <h2 id="real-cta-title" class="font-display" style="font-size:2.25rem;font-weight:700;color:var(--cream);letter-spacing:-0.02em;margin-bottom:1rem;">Your installation could be featured here</h2>
+    <p style="color:var(--cream-dim);font-size:1rem;line-height:1.75;margin-bottom:2rem;">Whether you have a restaurant, a commercial space, or a home on the South Shore, contact us for a free, no-obligation evaluation.</p>
+    <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
+      <a href="contact.html" class="btn-primary">
+        <i data-lucide="file-text" aria-hidden="true" style="width:16px;height:16px;"></i>
+        Request a Quote
+      </a>
+      <a href="services.html" class="btn-secondary">View Our Services</a>
+    </div>
+  </div>
+</section>
+
+<!-- Lightbox -->
+<div id="lightbox" role="dialog" aria-modal="true" aria-label="Image viewer">
+  <div class="lightbox-inner">
+    <button class="lightbox-close" onclick="closeLightbox()" aria-label="Close">
+      <i data-lucide="x" aria-hidden="true" style="width:24px;height:24px;"></i>
+    </button>
+    <button class="lightbox-nav lightbox-prev" onclick="navLightbox(-1)" aria-label="Previous">
+      <i data-lucide="chevron-left" aria-hidden="true" style="width:20px;height:20px;"></i>
+    </button>
+    <img id="lightbox-img" class="lightbox-img" src="" alt="">
+    <button class="lightbox-nav lightbox-next" onclick="navLightbox(1)" aria-label="Next">
+      <i data-lucide="chevron-right" aria-hidden="true" style="width:20px;height:20px;"></i>
+    </button>
+    <div class="lightbox-info">
+      <div id="lightbox-title" class="lightbox-title"></div>
+      <div id="lightbox-meta" class="lightbox-meta"></div>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-grid">
+    <div>
+      <div style="font-family:'Space Grotesk',sans-serif;font-size:1.05rem;font-weight:700;color:var(--cream);margin-bottom:0.5rem;">Ventilation R.S. Air Inc.</div>
+      <p style="font-size:0.82rem;color:var(--text-muted);margin-bottom:1.25rem;line-height:1.6;">Commercial and residential ventilation since 1985. South Shore of Montreal.</p>
+      <div class="footer-contact-item"><i data-lucide="map-pin" aria-hidden="true"></i>40 rue des Galets, La Prairie QC J5R 5A8</div>
+      <div class="footer-contact-item"><i data-lucide="phone" aria-hidden="true"></i><a href="tel:+14502322800" style="color:inherit;text-decoration:none;">(450) 232-2800</a></div>
+      <div class="footer-contact-item"><i data-lucide="mail" aria-hidden="true"></i><a href="mailto:info@rsairventilation.com" style="color:inherit;text-decoration:none;">info@rsairventilation.com</a></div>
+    </div>
+    <div>
+      <div class="footer-col-title">Services</div>
+      <a href="services.html#hoods" class="footer-link">Restaurant Hoods</a>
+      <a href="services.html#rooftop" class="footer-link">Rooftop Units</a>
+      <a href="services.html#heatpumps" class="footer-link">Heat Pumps</a>
+      <a href="services.html#maintenance" class="footer-link">Preventive Maintenance</a>
+    </div>
+    <div>
+      <div class="footer-col-title">Company</div>
+      <a href="about.html" class="footer-link">About Us</a>
+      <a href="portfolio.html" class="footer-link">Portfolio</a>
+      <a href="contact.html" class="footer-link">Contact</a>
+      <a href="../portail.html" class="footer-link">Client Portal</a>
+    </div>
+    <div>
+      <div class="footer-col-title">Certification</div>
+      <div class="rbq-badge"><i data-lucide="award" aria-hidden="true" style="width:12px;height:12px;"></i>RBQ 2388-0362-47</div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span class="footer-copy">© 2026 Ventilation R.S. Air Inc.</span>
+    <a href="../realisations.html" class="footer-link" style="margin:0;font-size:0.78rem;">Français</a>
+  </div>
+</footer>
+
+<script>
+  lucide.createIcons();
+  const nav = document.getElementById('nav-pill');
+  window.addEventListener('scroll', () => nav.classList.toggle('scrolled', window.scrollY > 60));
+
+  gsap.registerPlugin(ScrollTrigger);
+  document.querySelectorAll('.reveal').forEach(el => {
+    gsap.fromTo(el, { opacity:0, y:20 }, { opacity:1, y:0, duration:0.65, ease:'power2.out',
+      scrollTrigger: { trigger:el, start:'top 90%', once:true }
+    });
+  });
+
+  // Filter
+  document.querySelectorAll('.filter-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      const filter = btn.dataset.filter;
+      document.querySelectorAll('.gallery-card').forEach(card => {
+        card.style.display = (filter === 'all' || card.dataset.category === filter) ? '' : 'none';
+      });
+    });
+  });
+
+  // Lightbox
+  let cards = [], currentIdx = 0;
+  function buildCards() {
+    cards = Array.from(document.querySelectorAll('.gallery-card')).map(c => ({
+      src: c.querySelector('img').src,
+      alt: c.querySelector('img').alt,
+      title: c.dataset.title,
+      meta: c.dataset.meta
+    }));
+  }
+  function openLightbox(idx) {
+    buildCards();
+    currentIdx = idx;
+    showSlide();
+    document.getElementById('lightbox').classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeLightbox() {
+    document.getElementById('lightbox').classList.remove('open');
+    document.body.style.overflow = '';
+  }
+  function navLightbox(dir) {
+    currentIdx = (currentIdx + dir + cards.length) % cards.length;
+    showSlide();
+  }
+  function showSlide() {
+    const c = cards[currentIdx];
+    document.getElementById('lightbox-img').src = c.src;
+    document.getElementById('lightbox-img').alt = c.alt;
+    document.getElementById('lightbox-title').textContent = c.title;
+    document.getElementById('lightbox-meta').textContent = c.meta;
+  }
+  document.querySelectorAll('.gallery-card').forEach((card, i) => {
+    card.addEventListener('click', () => openLightbox(i));
+    card.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') openLightbox(i); });
+  });
+  document.getElementById('lightbox').addEventListener('click', e => {
+    if (e.target === document.getElementById('lightbox')) closeLightbox();
+  });
+  document.addEventListener('keydown', e => {
+    if (!document.getElementById('lightbox').classList.contains('open')) return;
+    if (e.key === 'Escape') closeLightbox();
+    if (e.key === 'ArrowLeft') navLightbox(-1);
+    if (e.key === 'ArrowRight') navLightbox(1);
+  });
+</script>
+<noscript><style>.reveal{opacity:1!important;transform:none!important;}</style></noscript>
+<script>/* reveal failsafe: never leave content stuck hidden if the GSAP CDN fails to load */
+(function(){if(typeof gsap==='undefined'||typeof ScrollTrigger==='undefined'){document.querySelectorAll('.reveal').forEach(function(e){e.style.opacity='1';e.style.transform='none';});}})();</script>
+</body>
+</html>

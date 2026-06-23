@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us — Ventilation R.S. Air Inc. | Family Business Since 1985, La Prairie</title>
+  <meta name="description" content="Ventilation R.S. Air Inc. — a family business passed down through generations, founded in 1985 in La Prairie. Specialists in commercial and residential ventilation on the South Shore of Montreal. RBQ Licence 2388-0362-47.">
+  <link rel="canonical" href="https://www.rsairventilation.com/en/about.html">
+  <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+  <link rel="manifest" href="../site.webmanifest">
+  <meta name="theme-color" content="#1c1410">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.rsairventilation.com/en/about.html">
+  <meta property="og:title" content="About Us — Ventilation R.S. Air Inc.">
+  <meta property="og:description" content="Family-owned commercial and residential ventilation company since 1985. La Prairie, South Shore of Montreal.">
+  <meta property="og:image" content="https://www.rsairventilation.com/images/og-image.png">
+  <meta property="og:locale" content="en_CA">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://www.rsairventilation.com/images/og-image.png">
+  <link rel="alternate" hreflang="fr-CA" href="https://www.rsairventilation.com/a-propos.html">
+  <link rel="alternate" hreflang="en-CA" href="https://www.rsairventilation.com/en/about.html">
+  <link rel="alternate" hreflang="x-default" href="https://www.rsairventilation.com/a-propos.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js"></script>
+
+  <style>
+    :root {
+      --bg:#1c1410;--surface:#241a13;--card:#2e2218;--card-hover:#382a1f;
+      --border:#3d2e22;--copper:#b87333;--copper-lt:#d4904a;--copper-dim:#8a5520;
+      --cream:#f0e8d8;--cream-dim:#c8bca8;--text:#f0e8d8;--text-muted:#9a8a78;--text-dim:#6a5a4a;
+    }
+    html{scroll-behavior:smooth;}
+    body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--text);overflow-x:hidden;}
+    .font-display{font-family:'Space Grotesk',sans-serif;}
+
+    #nav-pill{position:fixed;top:1.5rem;left:50%;transform:translateX(-50%);z-index:100;background:rgba(28,20,16,0.6);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border:1px solid var(--border);border-radius:9999px;padding:0.5rem 1.25rem;display:flex;align-items:center;gap:0;transition:background 0.3s,border-color 0.3s;white-space:nowrap;}
+    #nav-pill.scrolled{background:rgba(28,20,16,0.95);border-color:var(--copper-dim);}
+    .nav-link{font-family:'Space Grotesk',sans-serif;font-size:0.82rem;font-weight:500;letter-spacing:0.03em;color:var(--cream-dim);padding:0.4rem 0.85rem;border-radius:9999px;text-decoration:none;transition:color 0.2s,background 0.2s;}
+    .nav-link:hover,.nav-link.active{color:var(--cream);background:rgba(184,115,51,0.15);}
+    .nav-cta{background:var(--copper);color:var(--bg)!important;font-weight:600;margin-left:0.5rem;}
+    .nav-cta:hover{background:var(--copper-lt)!important;}
+    .nav-logo{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:0.9rem;color:var(--cream);margin-right:0.75rem;}
+    .nav-logo span{color:var(--copper);}
+    .nav-sep{width:1px;height:18px;background:var(--border);margin:0 0.25rem;}
+    .lang-btn{font-family:'Space Grotesk',sans-serif;font-size:0.75rem;font-weight:600;letter-spacing:0.05em;padding:0.25rem 0.5rem;border-radius:4px;text-decoration:none;transition:all 0.2s;}
+    .lang-btn.active{color:var(--copper);background:rgba(184,115,51,0.12);}
+    .lang-btn:not(.active){color:var(--text-muted);}
+    #mobile-menu{display:none;position:fixed;inset:0;z-index:99;background:var(--bg);padding:5rem 2rem 2rem;flex-direction:column;gap:1.5rem;}
+    #mobile-menu.open{display:flex;}
+    .mobile-nav-link{font-family:'Space Grotesk',sans-serif;font-size:1.5rem;font-weight:600;color:var(--cream-dim);text-decoration:none;border-bottom:1px solid var(--border);padding-bottom:1.25rem;}
+    #hamburger{display:none;background:none;border:none;cursor:pointer;color:var(--cream);margin-left:0.5rem;}
+    @media(max-width:900px){#nav-links{display:none;}#hamburger{display:flex;}#nav-pill{padding:0.5rem 1rem;}}
+
+    .page-header{padding:10rem 5rem 6rem;background:var(--surface);border-bottom:1px solid var(--border);position:relative;overflow:hidden;}
+    .page-header::before{content:'';position:absolute;top:0;right:0;bottom:0;width:50%;background:radial-gradient(ellipse at 80% 50%,rgba(184,115,51,0.07) 0%,transparent 70%);pointer-events:none;}
+    .header-grid{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center;}
+    .page-breadcrumb{font-family:'Space Grotesk',sans-serif;font-size:0.75rem;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;color:var(--text-dim);margin-bottom:1.25rem;display:flex;align-items:center;gap:0.5rem;}
+    .page-breadcrumb a{color:var(--text-dim);text-decoration:none;}
+    .page-title{font-family:'Space Grotesk',sans-serif;font-size:clamp(2.5rem,5vw,3.5rem);font-weight:700;color:var(--cream);letter-spacing:-0.02em;line-height:1.1;margin-bottom:1.25rem;}
+    .page-title em{font-style:normal;color:var(--copper);}
+    .section-label{font-family:'Space Grotesk',sans-serif;font-size:0.72rem;font-weight:600;letter-spacing:0.15em;text-transform:uppercase;color:var(--copper);margin-bottom:0.75rem;display:flex;align-items:center;gap:0.75rem;}
+    .section-label::after{content:'';display:block;width:30px;height:1px;background:var(--copper-dim);}
+    .section-title{font-family:'Space Grotesk',sans-serif;font-size:clamp(1.8rem,3vw,2.5rem);font-weight:700;color:var(--cream);letter-spacing:-0.02em;line-height:1.15;}
+
+    .history-section{padding:7rem 5rem;background:var(--bg);}
+    .history-grid{display:grid;grid-template-columns:1fr 2fr;gap:5rem;align-items:start;}
+    .timeline{margin-top:1rem;}
+    .timeline-item{display:grid;grid-template-columns:80px 1fr;gap:1.5rem;margin-bottom:3rem;position:relative;}
+    .timeline-item:not(:last-child)::after{content:'';position:absolute;left:39px;top:3rem;bottom:-1.5rem;width:1px;background:var(--border);}
+    .timeline-year{font-family:'Space Grotesk',sans-serif;font-size:0.82rem;font-weight:700;color:var(--copper);letter-spacing:0.05em;padding-top:0.35rem;}
+    .timeline-dot{position:absolute;left:35px;top:0.35rem;width:9px;height:9px;border-radius:50%;background:var(--copper);border:2px solid var(--bg);}
+    .timeline-body-title{font-family:'Space Grotesk',sans-serif;font-size:1rem;font-weight:600;color:var(--cream);margin-bottom:0.4rem;}
+    .timeline-body-text{font-size:0.87rem;color:var(--text-muted);line-height:1.7;}
+
+    .values-section{padding:7rem 5rem;background:var(--surface);border-top:1px solid var(--border);border-bottom:1px solid var(--border);}
+    .values-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5px;background:var(--border);margin-top:3.5rem;}
+    .value-card{background:var(--card);padding:2.5rem;position:relative;overflow:hidden;}
+    .value-card::after{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:var(--copper);transform:scaleX(0);transform-origin:left;transition:transform 0.35s ease;}
+    .value-card:hover::after{transform:scaleX(1);}
+    .value-num{font-family:'Space Grotesk',sans-serif;font-size:3rem;font-weight:700;color:transparent;-webkit-text-stroke:1px var(--border);line-height:1;margin-bottom:1rem;user-select:none;}
+    .value-icon{color:var(--copper);width:36px;height:36px;margin-bottom:1rem;}
+    .value-title{font-family:'Space Grotesk',sans-serif;font-size:1.05rem;font-weight:600;color:var(--cream);margin-bottom:0.6rem;}
+    .value-text{font-size:0.87rem;color:var(--text-muted);line-height:1.7;}
+
+    .creds-section{padding:6rem 5rem;background:var(--bg);}
+    .creds-grid{display:grid;grid-template-columns:1fr 1fr;gap:3rem;margin-top:3rem;}
+    .cred-card{background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:2rem;}
+    .cred-header{display:flex;align-items:flex-start;gap:1rem;margin-bottom:1rem;}
+    .cred-icon-box{width:44px;height:44px;background:rgba(184,115,51,0.1);border:1px solid var(--copper-dim);border-radius:8px;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+    .cred-icon-box i{color:var(--copper);width:20px;height:20px;}
+    .cred-title{font-family:'Space Grotesk',sans-serif;font-size:1rem;font-weight:600;color:var(--cream);margin-bottom:0.2rem;}
+    .cred-sub{font-size:0.82rem;color:var(--text-muted);}
+    .cred-value{font-family:'Space Grotesk',sans-serif;font-size:1.5rem;font-weight:700;color:var(--copper);margin-bottom:0.35rem;}
+    .cred-desc{font-size:0.85rem;color:var(--text-muted);line-height:1.65;}
+
+    .area-section{padding:6rem 5rem;background:var(--surface);border-top:1px solid var(--border);}
+    .area-grid{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:start;}
+    .area-map-placeholder{background:var(--card);border:1px solid var(--border);border-radius:8px;aspect-ratio:4/3;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;}
+    .area-city{font-family:'Space Grotesk',sans-serif;font-size:0.78rem;font-weight:500;color:var(--cream-dim);padding:0.25rem 0.65rem;background:rgba(184,115,51,0.12);border:1px solid var(--copper-dim);border-radius:4px;margin:0.25rem;display:inline-block;}
+    .area-cities{margin-top:1.5rem;line-height:2.2;}
+
+    .btn-primary{display:inline-flex;align-items:center;gap:0.6rem;background:var(--copper);color:var(--bg);font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:0.9rem;padding:0.85rem 1.75rem;border-radius:6px;text-decoration:none;transition:background 0.2s,transform 0.15s;}
+    .btn-primary:hover{background:var(--copper-lt);transform:translateY(-1px);}
+
+    footer{background:var(--surface);border-top:1px solid var(--border);padding:4rem 5rem 2rem;}
+    .footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:3rem;margin-bottom:3rem;}
+    .footer-col-title{font-family:'Space Grotesk',sans-serif;font-size:0.78rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--copper);margin-bottom:1.25rem;}
+    .footer-link{display:block;font-size:0.875rem;color:var(--text-muted);text-decoration:none;margin-bottom:0.6rem;transition:color 0.2s;}
+    .footer-link:hover{color:var(--cream);}
+    .footer-contact-item{display:flex;align-items:flex-start;gap:0.6rem;font-size:0.85rem;color:var(--text-muted);margin-bottom:0.75rem;line-height:1.5;}
+    .footer-contact-item i{color:var(--copper);flex-shrink:0;margin-top:2px;width:14px;height:14px;}
+    .footer-bottom{border-top:1px solid var(--border);padding-top:1.5rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:0.75rem;}
+    .footer-copy{font-size:0.78rem;color:var(--text-dim);}
+    .rbq-badge{display:inline-flex;align-items:center;gap:0.5rem;background:rgba(184,115,51,0.08);border:1px solid var(--copper-dim);border-radius:4px;padding:0.35rem 0.75rem;font-family:'Space Grotesk',sans-serif;font-size:0.72rem;font-weight:600;color:var(--copper-lt);letter-spacing:0.05em;}
+
+    .reveal{opacity:0;transform:translateY(24px);}
+
+    @media(max-width:1024px){
+      .page-header{padding:8rem 2rem 4rem;}
+      .header-grid{grid-template-columns:1fr;gap:2.5rem;}
+      .history-section{padding:5rem 2rem;}
+      .history-grid{grid-template-columns:1fr;}
+      .values-section{padding:5rem 2rem;}
+      .values-grid{grid-template-columns:1fr 1fr;}
+      .creds-section{padding:5rem 2rem;}
+      .creds-grid{grid-template-columns:1fr;}
+      .area-section{padding:5rem 2rem;}
+      .area-grid{grid-template-columns:1fr;}
+      footer{padding:3rem 2rem 1.5rem;}
+      .footer-grid{grid-template-columns:1fr 1fr;gap:2rem;}
+    }
+    @media(max-width:640px){
+      .values-grid{grid-template-columns:1fr;}
+      .footer-grid{grid-template-columns:1fr;}
+    }
+  </style>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "AboutPage",
+    "name": "About Us — Ventilation R.S. Air Inc.",
+    "url": "https://www.rsairventilation.com/en/about.html",
+    "description": "Family-owned commercial and residential ventilation company founded in 1985 in La Prairie, South Shore of Montreal.",
+    "mainEntity": {
+      "@type": "LocalBusiness",
+      "name": "Ventilation R.S. Air Inc.",
+      "foundingDate": "1985",
+      "founder": { "@type": "Person", "name": "R.S. Air Family" },
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "40 rue des Galets",
+        "addressLocality": "La Prairie",
+        "addressRegion": "QC",
+        "postalCode": "J5R 5A8",
+        "addressCountry": "CA"
+      }
+    }
+  }
+  </script>
+</head>
+<body>
+
+<nav id="nav-pill" role="navigation" aria-label="Main navigation">
+  <a href="index.html" class="nav-logo">RS<span>AIR</span></a>
+  <div class="nav-sep"></div>
+  <div id="nav-links" style="display:flex;align-items:center;gap:0;">
+    <a href="index.html" class="nav-link">Home</a>
+    <a href="services.html" class="nav-link">Services</a>
+    <a href="portfolio.html" class="nav-link">Portfolio</a>
+    <a href="about.html" class="nav-link active">About</a>
+    <a href="contact.html" class="nav-link nav-cta">Get a Quote</a>
+  </div>
+  <div style="display:flex;align-items:center;gap:0.25rem;margin-left:0.75rem;">
+    <div class="nav-sep"></div>
+    <a href="../a-propos.html" class="lang-btn" style="margin-left:0.5rem;">FR</a>
+    <a href="about.html" class="lang-btn active">EN</a>
+  </div>
+  <button id="hamburger" aria-label="Menu" onclick="document.getElementById('mobile-menu').classList.toggle('open')">
+    <i data-lucide="menu" aria-hidden="true" style="width:22px;height:22px;"></i>
+  </button>
+</nav>
+
+<div id="mobile-menu">
+  <button onclick="document.getElementById('mobile-menu').classList.remove('open')" style="position:absolute;top:1.5rem;right:1.5rem;background:none;border:none;color:var(--cream);cursor:pointer;">
+    <i data-lucide="x" aria-hidden="true" style="width:24px;height:24px;"></i>
+  </button>
+  <a href="index.html" class="mobile-nav-link">Home</a>
+  <a href="services.html" class="mobile-nav-link">Services</a>
+  <a href="portfolio.html" class="mobile-nav-link">Portfolio</a>
+  <a href="about.html" class="mobile-nav-link">About</a>
+  <a href="contact.html" class="mobile-nav-link" style="border:none;">Get a Quote</a>
+</div>
+
+<header class="page-header">
+  <div class="header-grid">
+    <div>
+      <div class="page-breadcrumb">
+        <a href="index.html">Home</a>
+        <i data-lucide="chevron-right" aria-hidden="true" style="width:12px;height:12px;"></i>
+        About
+      </div>
+      <h1 class="page-title">A family business<br>serving the <em>South Shore</em><br>since 1985</h1>
+      <p style="font-size:1.05rem;color:var(--cream-dim);line-height:1.75;max-width:520px;margin-top:1rem;">
+        Founded by the R.S. Air family in La Prairie, Ventilation R.S. Air specialized from the start in commercial kitchen hoods — a niche market requiring precise technical expertise. Forty years later, the business continues as a family tradition, with the same rigour and the same values.
+      </p>
+    </div>
+    <div aria-hidden="true">
+      <img src="../images/about-team.jpg" alt="" style="width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:4px;opacity:0.8;" loading="eager" width="600" height="450">
+    </div>
+  </div>
+</header>
+
+<!-- History -->
+<section class="history-section" aria-labelledby="history-title">
+  <div class="history-grid">
+    <div>
+      <div class="section-label">Our story</div>
+      <h2 id="history-title" class="section-title">40 years of ventilation<br>on the South Shore</h2>
+      <p style="font-size:0.95rem;color:var(--cream-dim);line-height:1.75;margin-top:1.25rem;">
+        From a small La Prairie trade operation to the specialized team we are today, Ventilation R.S. Air has grown alongside the South Shore — serving its restaurants, businesses, and homes.
+      </p>
+    </div>
+    <div class="timeline" role="list" aria-label="Company history">
+      <div class="timeline-item reveal" role="listitem">
+        <div style="position:relative;">
+          <div class="timeline-dot" aria-hidden="true"></div>
+          <div class="timeline-year">1985</div>
+        </div>
+        <div>
+          <div class="timeline-body-title">Founded in La Prairie</div>
+          <p class="timeline-body-text">The R.S. Air family establishes the company in La Prairie, on Montreal's South Shore. From day one, the specialty is commercial kitchen hoods — a niche that demands sharp technical expertise.</p>
+        </div>
+      </div>
+      <div class="timeline-item reveal" role="listitem">
+        <div style="position:relative;">
+          <div class="timeline-dot" aria-hidden="true"></div>
+          <div class="timeline-year">1990s</div>
+        </div>
+        <div>
+          <div class="timeline-body-title">Expanding into full HVAC</div>
+          <p class="timeline-body-text">Growing demand from restaurant clients leads the company to broaden its services to include rooftop units, central heating systems, and air conditioning for businesses across the South Shore.</p>
+        </div>
+      </div>
+      <div class="timeline-item reveal" role="listitem">
+        <div style="position:relative;">
+          <div class="timeline-dot" aria-hidden="true"></div>
+          <div class="timeline-year">2000s</div>
+        </div>
+        <div>
+          <div class="timeline-body-title">Second generation joins</div>
+          <p class="timeline-body-text">The company reaches a new milestone as the second generation of the family steps in. The core values — rigour, reliability, personalized service — remain at the heart of how business gets done.</p>
+        </div>
+      </div>
+      <div class="timeline-item reveal" role="listitem">
+        <div style="position:relative;">
+          <div class="timeline-dot" aria-hidden="true"></div>
+          <div class="timeline-year">2010s</div>
+        </div>
+        <div>
+          <div class="timeline-body-title">Heat pumps and residential HRV</div>
+          <p class="timeline-body-text">Quebec's energy transition pushes Ventilation R.S. Air to certify on new technologies: high-efficiency heat pumps, HRV air exchangers, and intelligent control systems for residential and commercial clients.</p>
+        </div>
+      </div>
+      <div class="timeline-item reveal" role="listitem">
+        <div style="position:relative;">
+          <div class="timeline-dot" aria-hidden="true"></div>
+          <div class="timeline-year">2026</div>
+        </div>
+        <div>
+          <div class="timeline-body-title">40 years of expertise, still in La Prairie</div>
+          <p class="timeline-body-text">The company celebrates 40 years of operation. Still based in La Prairie, still family-run, still specialized in mechanical ventilation — now with an online client portal for service contract holders.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Values -->
+<section class="values-section" aria-labelledby="values-title">
+  <div style="max-width:560px;">
+    <div class="section-label">What sets us apart</div>
+    <h2 id="values-title" class="section-title">Our company values</h2>
+  </div>
+  <div class="values-grid" role="list">
+    <div class="value-card reveal" role="listitem">
+      <div class="value-num" aria-hidden="true">01</div>
+      <i data-lucide="shield-check" aria-hidden="true" class="value-icon"></i>
+      <h3 class="value-title">Compliance and safety</h3>
+      <p class="value-text">Every installation meets building codes, NFPA 96 fire standards, and the requirements of the Régie du bâtiment du Québec. Our clients face zero compliance risk.</p>
+    </div>
+    <div class="value-card reveal" role="listitem">
+      <div class="value-num" aria-hidden="true">02</div>
+      <i data-lucide="handshake" aria-hidden="true" class="value-icon"></i>
+      <h3 class="value-title">Integrity and transparency</h3>
+      <p class="value-text">No surprises in our quotes. We explain every cost line, recommend only what you genuinely need, and deliver what we promised — on the agreed timeline.</p>
+    </div>
+    <div class="value-card reveal" role="listitem">
+      <div class="value-num" aria-hidden="true">03</div>
+      <i data-lucide="wrench" aria-hidden="true" class="value-icon"></i>
+      <h3 class="value-title">Technical expertise</h3>
+      <p class="value-text">Our technicians are trained specifically for commercial environments — restaurant kitchens, hotels, institutions. A rare level of expertise that few companies in the region can match.</p>
+    </div>
+    <div class="value-card reveal" role="listitem">
+      <div class="value-num" aria-hidden="true">04</div>
+      <i data-lucide="map-pin" aria-hidden="true" class="value-icon"></i>
+      <h3 class="value-title">Local roots</h3>
+      <p class="value-text">We live and work on the South Shore. Our clients are our neighbours. That proximity translates into faster response times, deep local knowledge, and lasting human relationships.</p>
+    </div>
+    <div class="value-card reveal" role="listitem">
+      <div class="value-num" aria-hidden="true">05</div>
+      <i data-lucide="leaf" aria-hidden="true" class="value-icon"></i>
+      <h3 class="value-title">Energy efficiency</h3>
+      <p class="value-text">The equipment we install is selected for its energy performance. Lower consumption, fewer emissions, and reduced operating costs for our clients — year after year.</p>
+    </div>
+    <div class="value-card reveal" role="listitem">
+      <div class="value-num" aria-hidden="true">06</div>
+      <i data-lucide="clock" aria-hidden="true" class="value-icon"></i>
+      <h3 class="value-title">Long-term reliability</h3>
+      <p class="value-text">Forty years of loyal clients doesn't happen by chance. We're in it for the long haul — maintenance, parts, advice, emergencies — not just the initial install.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Credentials -->
+<section class="creds-section" aria-labelledby="creds-title">
+  <div class="section-label">Accreditations</div>
+  <h2 id="creds-title" class="section-title">Certifications and licences</h2>
+  <div class="creds-grid">
+    <div class="cred-card reveal">
+      <div class="cred-header">
+        <div class="cred-icon-box"><i data-lucide="award" aria-hidden="true"></i></div>
+        <div>
+          <div class="cred-title">RBQ Licence</div>
+          <div class="cred-sub">Régie du bâtiment du Québec</div>
+        </div>
+      </div>
+      <div class="cred-value">2388-0362-47</div>
+      <p class="cred-desc">Building mechanics contractor licence — ventilation and air conditioning. Mandatory for all mechanical ventilation work in Quebec. Maintained in good standing since 1985.</p>
+    </div>
+    <div class="cred-card reveal">
+      <div class="cred-header">
+        <div class="cred-icon-box"><i data-lucide="building" aria-hidden="true"></i></div>
+        <div>
+          <div class="cred-title">Quebec Enterprise Number</div>
+          <div class="cred-sub">Registraire des entreprises</div>
+        </div>
+      </div>
+      <div class="cred-value">1142967752</div>
+      <p class="cred-desc">Ventilation R.S. Air Inc. is a legal person incorporated under Quebec law, registered with the Registraire des entreprises under NEQ number 1142967752.</p>
+    </div>
+    <div class="cred-card reveal">
+      <div class="cred-header">
+        <div class="cred-icon-box"><i data-lucide="flame" aria-hidden="true"></i></div>
+        <div>
+          <div class="cred-title">NFPA 96 Compliance</div>
+          <div class="cred-sub">National Fire Protection Association</div>
+        </div>
+      </div>
+      <div class="cred-value">NFPA 96</div>
+      <p class="cred-desc">Our technicians are trained on NFPA 96 standards for commercial kitchen ventilation systems. We issue the compliance certificates required by insurers and fire inspectors.</p>
+    </div>
+    <div class="cred-card reveal">
+      <div class="cred-header">
+        <div class="cred-icon-box"><i data-lucide="users" aria-hidden="true"></i></div>
+        <div>
+          <div class="cred-title">Recognized family business</div>
+          <div class="cred-sub">Founded 1985 — Passed down through generations</div>
+        </div>
+      </div>
+      <div class="cred-value">40+ yrs</div>
+      <p class="cred-desc">One of the longest-standing ventilation companies on the South Shore. Knowledge passed from generation to generation — a technical and human legacy that shows in every project we complete.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Service area -->
+<section class="area-section" aria-labelledby="area-title">
+  <div class="area-grid">
+    <div>
+      <div class="section-label">Service area</div>
+      <h2 id="area-title" class="section-title">We cover the South Shore<br>and beyond</h2>
+      <p style="font-size:0.95rem;color:var(--cream-dim);line-height:1.75;margin-top:1.25rem;">
+        Based in La Prairie, we serve the entire South Shore of Montreal, from Châteauguay to Boucherville, as well as the Island of Montreal and the North Shore for large-scale commercial projects.
+      </p>
+      <div class="area-cities" aria-label="Cities served">
+        <span class="area-city">La Prairie</span>
+        <span class="area-city">Brossard</span>
+        <span class="area-city">Saint-Lambert</span>
+        <span class="area-city">Longueuil</span>
+        <span class="area-city">Boucherville</span>
+        <span class="area-city">Sainte-Julie</span>
+        <span class="area-city">Varennes</span>
+        <span class="area-city">Candiac</span>
+        <span class="area-city">Saint-Constant</span>
+        <span class="area-city">Delson</span>
+        <span class="area-city">Châteauguay</span>
+        <span class="area-city">Laprairie (aggl.)</span>
+        <span class="area-city">Greater Montreal</span>
+        <span class="area-city">North Shore</span>
+      </div>
+      <div style="margin-top:2rem;display:flex;gap:1rem;flex-wrap:wrap;">
+        <a href="contact.html" class="btn-primary">
+          <i data-lucide="file-text" aria-hidden="true" style="width:16px;height:16px;"></i>
+          Request a Quote
+        </a>
+      </div>
+    </div>
+    <div class="area-map-placeholder" aria-label="Service area map — South Shore of Montreal">
+      <div style="text-align:center;padding:2rem;">
+        <i data-lucide="map" aria-hidden="true" style="width:48px;height:48px;color:var(--text-dim);margin-bottom:1rem;"></i>
+        <div style="font-family:'Space Grotesk',sans-serif;font-size:0.85rem;color:var(--text-muted);">La Prairie, South Shore<br>of Montreal</div>
+        <div style="margin-top:0.5rem;font-family:'Space Grotesk',sans-serif;font-size:0.75rem;color:var(--text-dim);">45°22'57"N 73°29'36"W</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-grid">
+    <div>
+      <div style="font-family:'Space Grotesk',sans-serif;font-size:1.05rem;font-weight:700;color:var(--cream);margin-bottom:0.5rem;">Ventilation R.S. Air Inc.</div>
+      <p style="font-size:0.82rem;color:var(--text-muted);margin-bottom:1.25rem;line-height:1.6;">Commercial and residential ventilation since 1985. South Shore of Montreal.</p>
+      <div class="footer-contact-item"><i data-lucide="map-pin" aria-hidden="true"></i>40 rue des Galets, La Prairie QC J5R 5A8</div>
+      <div class="footer-contact-item"><i data-lucide="phone" aria-hidden="true"></i><a href="tel:+14502322800" style="color:inherit;text-decoration:none;">(450) 232-2800</a></div>
+      <div class="footer-contact-item"><i data-lucide="mail" aria-hidden="true"></i><a href="mailto:info@rsairventilation.com" style="color:inherit;text-decoration:none;">info@rsairventilation.com</a></div>
+    </div>
+    <div>
+      <div class="footer-col-title">Services</div>
+      <a href="services.html#hoods" class="footer-link">Restaurant Hoods</a>
+      <a href="services.html#rooftop" class="footer-link">Rooftop Units</a>
+      <a href="services.html#heatpumps" class="footer-link">Heat Pumps</a>
+      <a href="services.html#maintenance" class="footer-link">Preventive Maintenance</a>
+    </div>
+    <div>
+      <div class="footer-col-title">Company</div>
+      <a href="about.html" class="footer-link">About Us</a>
+      <a href="portfolio.html" class="footer-link">Portfolio</a>
+      <a href="contact.html" class="footer-link">Contact</a>
+      <a href="../portail.html" class="footer-link">Client Portal</a>
+    </div>
+    <div>
+      <div class="footer-col-title">Certification</div>
+      <div class="rbq-badge"><i data-lucide="award" aria-hidden="true" style="width:12px;height:12px;"></i>RBQ 2388-0362-47</div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span class="footer-copy">© 2026 Ventilation R.S. Air Inc.</span>
+    <a href="../a-propos.html" class="footer-link" style="margin:0;font-size:0.78rem;">Français</a>
+  </div>
+</footer>
+
+<script>
+  lucide.createIcons();
+  const nav = document.getElementById('nav-pill');
+  window.addEventListener('scroll', () => nav.classList.toggle('scrolled', window.scrollY > 60));
+  gsap.registerPlugin(ScrollTrigger);
+  document.querySelectorAll('.reveal').forEach(el => {
+    gsap.fromTo(el, { opacity:0, y:24 }, { opacity:1, y:0, duration:0.7, ease:'power2.out',
+      scrollTrigger: { trigger:el, start:'top 88%', once:true }
+    });
+  });
+</script>
+<noscript><style>.reveal{opacity:1!important;transform:none!important;}</style></noscript>
+<script>/* reveal failsafe: never leave content stuck hidden if the GSAP CDN fails to load */
+(function(){if(typeof gsap==='undefined'||typeof ScrollTrigger==='undefined'){document.querySelectorAll('.reveal').forEach(function(e){e.style.opacity='1';e.style.transform='none';});}})();</script>
+</body>
+</html>

@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+
+  <url>
+    <loc>https://www.rsairventilation.com/</loc>
+    <xhtml:link rel="alternate" hreflang="fr-CA" href="https://www.rsairventilation.com/"/>
+    <xhtml:link rel="alternate" hreflang="en-CA" href="https://www.rsairventilation.com/en/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.rsairventilation.com/"/>
+    <image:image><image:loc>https://www.rsairventilation.com/images/hero-kitchen.jpg</image:loc></image:image>
+    <image:image><image:loc>https://www.rsairventilation.com/images/why-ventilation.jpg</image:loc></image:image>
+    <image:image><image:loc>https://www.rsairventilation.com/images/project-1.jpg</image:loc></image:image>
+    <lastmod>2026-06-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <url>
+    <loc>https://www.rsairventilation.com/services.html</loc>
+    <xhtml:link rel="alternate" hreflang="fr-CA" href="https://www.rsairventilation.com/services.html"/>
+    <xhtml:link rel="alternate" hreflang="en-CA" href="https://www.rsairventilation.com/en/services.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.rsairventilation.com/services.html"/>
+    <lastmod>2026-06-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://www.rsairventilation.com/realisations.html</loc>
+    <xhtml:link rel="alternate" hreflang="fr-CA" href="https://www.rsairventilation.com/realisations.html"/>
+    <xhtml:link rel="alternate" hreflang="en-CA" href="https://www.rsairventilation.com/en/portfolio.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.rsairventilation.com/realisations.html"/>
+    <image:image><image:loc>https://www.rsairventilation.com/images/project-1.jpg</image:loc></image:image>
+    <image:image><image:loc>https://www.rsairventilation.com/images/project-2.jpg</image:loc></image:image>
+    <image:image><image:loc>https://www.rsairventilation.com/images/project-3.jpg</image:loc></image:image>
+    <image:image><image:loc>https://www.rsairventilation.com/images/project-4.jpg</image:loc></image:image>
+    <image:image><image:loc>https://www.rsairventilation.com/images/project-5.jpg</image:loc></image:image>
+    <image:image><image:loc>https://www.rsairventilation.com/images/project-6.jpg</image:loc></image:image>
+    <image:image><image:loc>https://www.rsairventilation.com/images/project-7.jpg</image:loc></image:image>
+    <image:image><image:loc>https://www.rsairventilation.com/images/project-8.jpg</image:loc></image:image>
+    <image:image><image:loc>https://www.rsairventilation.com/images/project-9.jpg</image:loc></image:image>
+    <lastmod>2026-06-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.rsairventilation.com/a-propos.html</loc>
+    <xhtml:link rel="alternate" hreflang="fr-CA" href="https://www.rsairventilation.com/a-propos.html"/>
+    <xhtml:link rel="alternate" hreflang="en-CA" href="https://www.rsairventilation.com/en/about.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.rsairventilation.com/a-propos.html"/>
+    <lastmod>2026-06-23</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://www.rsairventilation.com/contact.html</loc>
+    <xhtml:link rel="alternate" hreflang="fr-CA" href="https://www.rsairventilation.com/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="en-CA" href="https://www.rsairventilation.com/en/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.rsairventilation.com/contact.html"/>
+    <lastmod>2026-06-23</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- EN mirror pages -->
+  <url>
+    <loc>https://www.rsairventilation.com/en/</loc>
+    <xhtml:link rel="alternate" hreflang="fr-CA" href="https://www.rsairventilation.com/"/>
+    <xhtml:link rel="alternate" hreflang="en-CA" href="https://www.rsairventilation.com/en/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.rsairventilation.com/"/>
+    <lastmod>2026-06-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://www.rsairventilation.com/en/services.html</loc>
+    <xhtml:link rel="alternate" hreflang="fr-CA" href="https://www.rsairventilation.com/services.html"/>
+    <xhtml:link rel="alternate" hreflang="en-CA" href="https://www.rsairventilation.com/en/services.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.rsairventilation.com/services.html"/>
+    <lastmod>2026-06-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.rsairventilation.com/en/portfolio.html</loc>
+    <xhtml:link rel="alternate" hreflang="fr-CA" href="https://www.rsairventilation.com/realisations.html"/>
+    <xhtml:link rel="alternate" hreflang="en-CA" href="https://www.rsairventilation.com/en/portfolio.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.rsairventilation.com/realisations.html"/>
+    <lastmod>2026-06-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://www.rsairventilation.com/en/about.html</loc>
+    <xhtml:link rel="alternate" hreflang="fr-CA" href="https://www.rsairventilation.com/a-propos.html"/>
+    <xhtml:link rel="alternate" hreflang="en-CA" href="https://www.rsairventilation.com/en/about.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.rsairventilation.com/a-propos.html"/>
+    <lastmod>2026-06-23</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://www.rsairventilation.com/en/contact.html</loc>
+    <xhtml:link rel="alternate" hreflang="fr-CA" href="https://www.rsairventilation.com/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="en-CA" href="https://www.rsairventilation.com/en/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.rsairventilation.com/contact.html"/>
+    <lastmod>2026-06-23</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+</urlset>

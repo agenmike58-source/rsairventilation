@@ -1,0 +1,1513 @@
+<!DOCTYPE html>
+<html lang="fr-CA">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ventilation R.S. Air Inc. — Hottes de restaurant et ventilation commerciale, Rive-Sud</title>
+  <meta name="description" content="Spécialistes des hottes de cuisine de restaurant depuis 1985. Installation, entretien et réparation de systèmes de ventilation commerciale à La Prairie et sur la Rive-Sud de Montréal. RBQ 2388-0362-47.">
+  <link rel="canonical" href="https://www.rsairventilation.com/">
+  <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+  <link rel="manifest" href="site.webmanifest">
+  <meta name="theme-color" content="#1c1410">
+  <!-- OG -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.rsairventilation.com/">
+  <meta property="og:title" content="Ventilation R.S. Air Inc. — Hottes de restaurant, Rive-Sud">
+  <meta property="og:description" content="40 ans d'expertise en hottes de cuisine commerciales. Installation, entretien et conformité aux normes incendie. Rive-Sud de Montréal.">
+  <meta property="og:image" content="https://www.rsairventilation.com/images/og-image.png">
+  <meta property="og:locale" content="fr_CA">
+  <meta property="og:site_name" content="Ventilation R.S. Air Inc.">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Ventilation R.S. Air Inc. — Hottes de restaurant, Rive-Sud">
+  <meta name="twitter:description" content="40 ans d'expertise en hottes de cuisine commerciales. La Prairie, Rive-Sud de Montréal.">
+  <meta name="twitter:image" content="https://www.rsairventilation.com/images/og-image.png">
+  <!-- Hreflang -->
+  <link rel="alternate" hreflang="fr-CA" href="https://www.rsairventilation.com/">
+  <link rel="alternate" hreflang="en-CA" href="https://www.rsairventilation.com/en/">
+  <link rel="alternate" hreflang="x-default" href="https://www.rsairventilation.com/">
+  <!-- Fonts: Space Grotesk + DM Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet">
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Lucide -->
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+  <!-- GSAP -->
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js"></script>
+
+  <style>
+    :root {
+      --bg:         #1c1410;
+      --surface:    #241a13;
+      --card:       #2e2218;
+      --card-hover: #382a1f;
+      --border:     #3d2e22;
+      --copper:     #b87333;
+      --copper-lt:  #d4904a;
+      --copper-dim: #8a5520;
+      --cream:      #f0e8d8;
+      --cream-dim:  #c8bca8;
+      --text:       #f0e8d8;
+      --text-muted: #9a8a78;
+      --text-dim:   #6a5a4a;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      font-size: 16px;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    .font-display { font-family: 'Space Grotesk', sans-serif; }
+
+    /* ── NAV ── */
+    #nav-pill {
+      position: fixed;
+      top: 1.5rem;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 100;
+      background: rgba(28,20,16,0.6);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid var(--border);
+      border-radius: 9999px;
+      padding: 0.5rem 1.25rem;
+      display: flex;
+      align-items: center;
+      gap: 0;
+      transition: background 0.3s ease, border-color 0.3s ease;
+      white-space: nowrap;
+    }
+
+    #nav-pill.scrolled {
+      background: rgba(28,20,16,0.95);
+      border-color: var(--copper-dim);
+    }
+
+    .nav-link {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 0.82rem;
+      font-weight: 500;
+      letter-spacing: 0.03em;
+      color: var(--cream-dim);
+      padding: 0.4rem 0.85rem;
+      border-radius: 9999px;
+      text-decoration: none;
+      transition: color 0.2s, background 0.2s;
+    }
+    .nav-link:hover, .nav-link.active {
+      color: var(--cream);
+      background: rgba(184,115,51,0.15);
+    }
+    .nav-cta {
+      background: var(--copper);
+      color: var(--bg) !important;
+      font-weight: 600;
+      margin-left: 0.5rem;
+    }
+    .nav-cta:hover {
+      background: var(--copper-lt) !important;
+    }
+    .nav-logo {
+      font-family: 'Space Grotesk', sans-serif;
+      font-weight: 700;
+      font-size: 0.9rem;
+      color: var(--cream);
+      margin-right: 0.75rem;
+      letter-spacing: -0.01em;
+    }
+    .nav-logo span { color: var(--copper); }
+    .nav-sep {
+      width: 1px;
+      height: 18px;
+      background: var(--border);
+      margin: 0 0.25rem;
+    }
+    .lang-toggle {
+      display: flex;
+      align-items: center;
+      gap: 0.25rem;
+      margin-left: 0.25rem;
+    }
+    .lang-btn {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      padding: 0.25rem 0.5rem;
+      border-radius: 4px;
+      text-decoration: none;
+      transition: all 0.2s;
+    }
+    .lang-btn.active {
+      color: var(--copper);
+      background: rgba(184,115,51,0.12);
+    }
+    .lang-btn:not(.active) {
+      color: var(--text-muted);
+    }
+    .lang-btn:not(.active):hover {
+      color: var(--cream-dim);
+    }
+
+    /* Mobile menu */
+    #mobile-menu {
+      display: none;
+      position: fixed;
+      inset: 0;
+      z-index: 99;
+      background: var(--bg);
+      padding: 5rem 2rem 2rem;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+    #mobile-menu.open { display: flex; }
+    .mobile-nav-link {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: var(--cream-dim);
+      text-decoration: none;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 1.25rem;
+      transition: color 0.2s;
+    }
+    .mobile-nav-link:hover { color: var(--copper); }
+
+    #hamburger {
+      display: none;
+      background: none;
+      border: none;
+      cursor: pointer;
+      color: var(--cream);
+      margin-left: 0.5rem;
+    }
+
+    @media (max-width: 900px) {
+      #nav-links { display: none; }
+      #hamburger { display: flex; }
+      #nav-pill { padding: 0.5rem 1rem; }
+    }
+
+    /* ── HERO ── */
+    #hero {
+      min-height: 100vh;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-left {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 8rem 3rem 5rem 5rem;
+      position: relative;
+      z-index: 2;
+    }
+
+    .hero-right {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-right::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to right, var(--bg) 0%, transparent 40%);
+      z-index: 1;
+    }
+
+    .hero-right img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0.65;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: rgba(184,115,51,0.12);
+      border: 1px solid var(--copper-dim);
+      color: var(--copper-lt);
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 0.35rem 0.85rem;
+      border-radius: 4px;
+      margin-bottom: 2rem;
+    }
+
+    .hero-year {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: clamp(6rem, 14vw, 12rem);
+      font-weight: 700;
+      line-height: 0.85;
+      color: transparent;
+      -webkit-text-stroke: 1px var(--border);
+      position: absolute;
+      top: 30%;
+      right: -2rem;
+      z-index: 0;
+      pointer-events: none;
+      user-select: none;
+    }
+
+    .hero-title {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: clamp(2.5rem, 5vw, 4rem);
+      font-weight: 700;
+      line-height: 1.1;
+      color: var(--cream);
+      margin-bottom: 1.5rem;
+      letter-spacing: -0.02em;
+    }
+
+    .hero-title em {
+      font-style: normal;
+      color: var(--copper);
+    }
+
+    .hero-sub {
+      font-size: 1.1rem;
+      color: var(--cream-dim);
+      max-width: 480px;
+      margin-bottom: 2.5rem;
+      line-height: 1.7;
+    }
+
+    .hero-stats {
+      display: flex;
+      gap: 2.5rem;
+      margin-bottom: 2.5rem;
+    }
+
+    .stat-item {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .stat-num {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 2rem;
+      font-weight: 700;
+      color: var(--copper);
+      line-height: 1;
+    }
+
+    .stat-label {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      margin-top: 0.25rem;
+    }
+
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      background: var(--copper);
+      color: var(--bg);
+      font-family: 'Space Grotesk', sans-serif;
+      font-weight: 600;
+      font-size: 0.9rem;
+      padding: 0.85rem 1.75rem;
+      border-radius: 6px;
+      text-decoration: none;
+      transition: background 0.2s, transform 0.15s;
+      letter-spacing: 0.01em;
+    }
+    .btn-primary:hover {
+      background: var(--copper-lt);
+      transform: translateY(-1px);
+    }
+
+    .btn-secondary {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      background: transparent;
+      color: var(--cream-dim);
+      font-family: 'Space Grotesk', sans-serif;
+      font-weight: 500;
+      font-size: 0.9rem;
+      padding: 0.85rem 1.75rem;
+      border-radius: 6px;
+      border: 1px solid var(--border);
+      text-decoration: none;
+      transition: all 0.2s;
+    }
+    .btn-secondary:hover {
+      border-color: var(--copper-dim);
+      color: var(--cream);
+    }
+
+    .hero-cta {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    /* ── TRUST STRIP ── */
+    .trust-strip {
+      background: var(--surface);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      padding: 1.25rem 3rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .trust-item {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 0.82rem;
+      font-weight: 500;
+      color: var(--cream-dim);
+      letter-spacing: 0.02em;
+    }
+
+    .trust-item i {
+      color: var(--copper);
+      width: 16px;
+      height: 16px;
+    }
+
+    /* ── SECTIONS ── */
+    .section-label {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--copper);
+      margin-bottom: 0.75rem;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+    .section-label::after {
+      content: '';
+      display: block;
+      width: 40px;
+      height: 1px;
+      background: var(--copper-dim);
+    }
+
+    .section-title {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: clamp(2rem, 3.5vw, 2.75rem);
+      font-weight: 700;
+      color: var(--cream);
+      letter-spacing: -0.02em;
+      line-height: 1.15;
+    }
+
+    /* ── SERVICES ── */
+    #services {
+      padding: 7rem 5rem;
+      background: var(--bg);
+    }
+
+    .services-header {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+      margin-bottom: 4rem;
+      align-items: end;
+    }
+
+    .services-desc {
+      color: var(--cream-dim);
+      font-size: 1.05rem;
+      line-height: 1.75;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5px;
+      background: var(--border);
+    }
+
+    .service-card {
+      background: var(--surface);
+      padding: 2.5rem;
+      position: relative;
+      overflow: hidden;
+      transition: background 0.25s;
+      cursor: default;
+    }
+
+    .service-card::before {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: var(--copper);
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.3s ease;
+    }
+
+    .service-card:hover {
+      background: var(--card);
+    }
+
+    .service-card:hover::before {
+      transform: scaleX(1);
+    }
+
+    .service-num {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      color: var(--text-dim);
+      margin-bottom: 1.5rem;
+    }
+
+    .service-icon {
+      width: 44px;
+      height: 44px;
+      color: var(--copper);
+      margin-bottom: 1.25rem;
+    }
+
+    .service-name {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: var(--cream);
+      margin-bottom: 0.75rem;
+      line-height: 1.3;
+    }
+
+    .service-desc {
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      line-height: 1.65;
+    }
+
+    /* ── WHY US ── */
+    #why {
+      padding: 7rem 5rem;
+      background: var(--surface);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .why-grid {
+      display: grid;
+      grid-template-columns: 5fr 4fr;
+      gap: 5rem;
+      align-items: center;
+    }
+
+    .why-list {
+      margin-top: 3rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1.75rem;
+    }
+
+    .why-item {
+      display: grid;
+      grid-template-columns: 48px 1fr;
+      gap: 1.25rem;
+      align-items: start;
+    }
+
+    .why-icon-box {
+      width: 48px;
+      height: 48px;
+      background: rgba(184,115,51,0.1);
+      border: 1px solid var(--copper-dim);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .why-icon-box i {
+      color: var(--copper);
+      width: 20px;
+      height: 20px;
+    }
+
+    .why-item-title {
+      font-family: 'Space Grotesk', sans-serif;
+      font-weight: 600;
+      font-size: 1rem;
+      color: var(--cream);
+      margin-bottom: 0.35rem;
+    }
+
+    .why-item-desc {
+      font-size: 0.87rem;
+      color: var(--text-muted);
+      line-height: 1.65;
+    }
+
+    .why-image-block {
+      position: relative;
+    }
+
+    .why-image-block img {
+      width: 100%;
+      aspect-ratio: 3/4;
+      object-fit: cover;
+      border-radius: 4px;
+    }
+
+    .why-tag {
+      position: absolute;
+      bottom: -1.5rem;
+      left: -1.5rem;
+      background: var(--copper);
+      color: var(--bg);
+      font-family: 'Space Grotesk', sans-serif;
+      font-weight: 700;
+      padding: 1.25rem 1.75rem;
+      border-radius: 4px;
+    }
+
+    .why-tag-num {
+      font-size: 2.5rem;
+      line-height: 1;
+      display: block;
+    }
+
+    .why-tag-text {
+      font-size: 0.8rem;
+      font-weight: 500;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      opacity: 0.8;
+    }
+
+    /* ── PARTNERS ── */
+    #partners {
+      padding: 5rem;
+      background: var(--bg);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .partners-strip {
+      display: flex;
+      align-items: center;
+      gap: 3rem;
+      flex-wrap: wrap;
+      margin-top: 2.5rem;
+    }
+
+    .partner-name {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--text-dim);
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      transition: color 0.2s;
+    }
+
+    .partner-name:hover {
+      color: var(--cream-dim);
+    }
+
+    /* ── RÉALISATIONS PREVIEW ── */
+    #realisations-preview {
+      padding: 7rem 5rem;
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .real-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      margin-bottom: 3.5rem;
+    }
+
+    .real-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr;
+      grid-template-rows: auto auto;
+      gap: 1.5px;
+      background: var(--border);
+    }
+
+    .real-card {
+      background: var(--card);
+      overflow: hidden;
+      position: relative;
+      cursor: pointer;
+    }
+
+    .real-card:first-child {
+      grid-row: span 2;
+    }
+
+    .real-card img {
+      width: 100%;
+      height: 100%;
+      min-height: 220px;
+      object-fit: cover;
+      transition: transform 0.5s ease, opacity 0.3s;
+      opacity: 0.75;
+    }
+
+    .real-card:hover img {
+      transform: scale(1.04);
+      opacity: 0.9;
+    }
+
+    .real-card-overlay {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: 1.5rem;
+      background: linear-gradient(to top, rgba(28,20,16,0.9) 0%, transparent 100%);
+    }
+
+    .real-card-title {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: var(--cream);
+    }
+
+    .real-card-tag {
+      font-size: 0.75rem;
+      color: var(--copper-lt);
+      margin-top: 0.2rem;
+    }
+
+    /* ── PORTAL CALLOUT ── */
+    #portal-callout {
+      padding: 6rem 5rem;
+      background: var(--bg);
+    }
+
+    .portal-inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: center;
+      border: 1px solid var(--border);
+      padding: 4rem;
+      border-radius: 8px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .portal-inner::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: linear-gradient(to right, var(--copper), var(--copper-lt), transparent);
+    }
+
+    .portal-screen {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    .portal-screen-bar {
+      background: var(--card);
+      padding: 0.75rem 1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .dot { width: 8px; height: 8px; border-radius: 50%; }
+    .dot-r { background: #c0392b; }
+    .dot-y { background: #f39c12; }
+    .dot-g { background: #27ae60; }
+
+    .portal-screen-content {
+      padding: 1.25rem;
+    }
+
+    .portal-mini-stat {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.75rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .mini-stat-card {
+      background: var(--card);
+      border-radius: 6px;
+      padding: 0.75rem;
+    }
+
+    .mini-stat-num {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--copper);
+    }
+
+    .mini-stat-lbl {
+      font-size: 0.7rem;
+      color: var(--text-muted);
+    }
+
+    .portal-mini-row {
+      background: var(--card);
+      border-radius: 6px;
+      padding: 0.65rem 0.85rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 0.5rem;
+    }
+
+    .portal-mini-row-label {
+      font-size: 0.78rem;
+      color: var(--cream-dim);
+    }
+
+    .portal-mini-badge {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 0.65rem;
+      font-weight: 600;
+      padding: 0.2rem 0.5rem;
+      border-radius: 4px;
+      letter-spacing: 0.05em;
+    }
+
+    .badge-green { background: rgba(39,174,96,0.15); color: #27ae60; }
+    .badge-amber { background: rgba(243,156,18,0.15); color: #f39c12; }
+
+    /* ── CTA BAND ── */
+    #cta-band {
+      padding: 6rem 5rem;
+      background: var(--copper);
+      text-align: center;
+    }
+
+    #cta-band .section-title {
+      color: var(--bg);
+    }
+
+    #cta-band p {
+      color: rgba(28,20,16,0.75);
+      margin: 1rem auto 2.5rem;
+      max-width: 540px;
+      font-size: 1.05rem;
+    }
+
+    .btn-dark {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      background: var(--bg);
+      color: var(--copper-lt);
+      font-family: 'Space Grotesk', sans-serif;
+      font-weight: 600;
+      font-size: 0.95rem;
+      padding: 1rem 2rem;
+      border-radius: 6px;
+      text-decoration: none;
+      transition: all 0.2s;
+    }
+
+    .btn-dark:hover {
+      background: var(--surface);
+      transform: translateY(-2px);
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      background: var(--surface);
+      border-top: 1px solid var(--border);
+      padding: 4rem 5rem 2rem;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 3rem;
+      margin-bottom: 3rem;
+    }
+
+    .footer-brand-name {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--cream);
+      margin-bottom: 0.5rem;
+    }
+
+    .footer-brand-tag {
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      margin-bottom: 1.25rem;
+      line-height: 1.6;
+    }
+
+    .footer-contact-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.6rem;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      margin-bottom: 0.75rem;
+      line-height: 1.5;
+    }
+
+    .footer-contact-item i {
+      color: var(--copper);
+      flex-shrink: 0;
+      margin-top: 2px;
+      width: 14px;
+      height: 14px;
+    }
+
+    .footer-col-title {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--copper);
+      margin-bottom: 1.25rem;
+    }
+
+    .footer-link {
+      display: block;
+      font-size: 0.875rem;
+      color: var(--text-muted);
+      text-decoration: none;
+      margin-bottom: 0.6rem;
+      transition: color 0.2s;
+    }
+
+    .footer-link:hover { color: var(--cream); }
+
+    .footer-bottom {
+      border-top: 1px solid var(--border);
+      padding-top: 1.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+    }
+
+    .footer-copy {
+      font-size: 0.78rem;
+      color: var(--text-dim);
+    }
+
+    .rbq-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: rgba(184,115,51,0.08);
+      border: 1px solid var(--copper-dim);
+      border-radius: 4px;
+      padding: 0.35rem 0.75rem;
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 0.72rem;
+      font-weight: 600;
+      color: var(--copper-lt);
+      letter-spacing: 0.05em;
+    }
+
+    /* ── ANIMATIONS ── */
+    .reveal { opacity: 0; transform: translateY(32px); }
+    .reveal.visible { opacity: 1; transform: none; transition: opacity 0.7s ease, transform 0.7s ease; }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 1024px) {
+      #hero { grid-template-columns: 1fr; min-height: auto; }
+      .hero-left { padding: 7rem 2rem 4rem; }
+      .hero-right { display: none; }
+      #services { padding: 5rem 2rem; }
+      .services-header { grid-template-columns: 1fr; }
+      .services-grid { grid-template-columns: 1fr 1fr; }
+      #why { padding: 5rem 2rem; }
+      .why-grid { grid-template-columns: 1fr; }
+      .why-image-block { display: none; }
+      #partners { padding: 4rem 2rem; }
+      #realisations-preview { padding: 5rem 2rem; }
+      .real-grid { grid-template-columns: 1fr 1fr; }
+      .real-card:first-child { grid-column: span 2; grid-row: span 1; }
+      #portal-callout { padding: 4rem 2rem; }
+      .portal-inner { grid-template-columns: 1fr; gap: 2.5rem; padding: 2.5rem; }
+      #cta-band { padding: 5rem 2rem; }
+      footer { padding: 3rem 2rem 1.5rem; }
+      .footer-grid { grid-template-columns: 1fr 1fr; gap: 2rem; }
+      .trust-strip { padding: 1.25rem 2rem; }
+    }
+
+    @media (max-width: 640px) {
+      .services-grid { grid-template-columns: 1fr; }
+      .real-grid { grid-template-columns: 1fr; }
+      .real-card:first-child { grid-column: auto; }
+      .footer-grid { grid-template-columns: 1fr; }
+      .hero-stats { flex-wrap: wrap; gap: 1.5rem; }
+    }
+  </style>
+
+  <!-- JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "LocalBusiness",
+        "@id": "https://www.rsairventilation.com/#org",
+        "name": "Ventilation R.S. Air Inc.",
+        "alternateName": "RS Air",
+        "description": "Spécialistes des hottes de cuisine de restaurant depuis 1985. Installation, entretien et réparation de systèmes de ventilation commerciale sur la Rive-Sud de Montréal.",
+        "url": "https://www.rsairventilation.com/",
+        "telephone": "+14502322800",
+        "email": "info@rsairventilation.com",
+        "foundingDate": "1985",
+        "founder": { "@type": "Person", "name": "Famille R.S. Air" },
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "40, rue des Galets",
+          "addressLocality": "La Prairie",
+          "addressRegion": "QC",
+          "postalCode": "J5R 5A8",
+          "addressCountry": "CA"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 45.3826,
+          "longitude": -73.4933
+        },
+        "openingHoursSpecification": [
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+            "opens": "07:30",
+            "closes": "16:30"
+          }
+        ],
+        "areaServed": [
+          "La Prairie", "Brossard", "Saint-Lambert", "Longueuil", "Boucherville",
+          "Sainte-Julie", "Varennes", "Candiac", "Saint-Constant", "Delson",
+          "Grand Montréal", "Rive-Nord de Montréal"
+        ],
+        "priceRange": "$$",
+        "hasCredential": [
+          {
+            "@type": "EducationalOccupationalCredential",
+            "name": "Licence RBQ",
+            "credentialCategory": "Régie du bâtiment du Québec",
+            "identifier": "2388-0362-47"
+          }
+        ],
+        "identifier": [
+          { "@type": "PropertyValue", "name": "NEQ", "value": "1142967752" },
+          { "@type": "PropertyValue", "name": "RBQ", "value": "2388-0362-47" }
+        ],
+        "sameAs": []
+      },
+      {
+        "@type": "Organization",
+        "@id": "https://www.rsairventilation.com/#company",
+        "name": "Ventilation R.S. Air Inc.",
+        "url": "https://www.rsairventilation.com/"
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+
+<!-- ── NAV ── -->
+<nav id="nav-pill" role="navigation" aria-label="Navigation principale">
+  <a href="/" class="nav-logo">RS<span>AIR</span></a>
+  <div class="nav-sep"></div>
+  <div id="nav-links" style="display:flex;align-items:center;gap:0;">
+    <a href="/" class="nav-link active">Accueil</a>
+    <a href="services.html" class="nav-link">Services</a>
+    <a href="realisations.html" class="nav-link">Réalisations</a>
+    <a href="a-propos.html" class="nav-link">À propos</a>
+    <a href="contact.html" class="nav-link nav-cta">Soumission</a>
+  </div>
+  <div class="lang-toggle" style="margin-left:0.75rem;">
+    <div class="nav-sep"></div>
+    <a href="/" class="lang-btn active" style="margin-left:0.5rem;">FR</a>
+    <a href="en/" class="lang-btn">EN</a>
+  </div>
+  <button id="hamburger" aria-label="Menu" onclick="document.getElementById('mobile-menu').classList.toggle('open')">
+    <i data-lucide="menu" aria-hidden="true" style="width:22px;height:22px;"></i>
+  </button>
+</nav>
+
+<!-- Mobile menu -->
+<div id="mobile-menu" role="dialog" aria-modal="true" aria-label="Menu mobile">
+  <button onclick="document.getElementById('mobile-menu').classList.remove('open')" style="position:absolute;top:1.5rem;right:1.5rem;background:none;border:none;color:var(--cream);cursor:pointer;">
+    <i data-lucide="x" aria-hidden="true" style="width:24px;height:24px;"></i>
+  </button>
+  <a href="/" class="mobile-nav-link">Accueil</a>
+  <a href="services.html" class="mobile-nav-link">Services</a>
+  <a href="realisations.html" class="mobile-nav-link">Réalisations</a>
+  <a href="a-propos.html" class="mobile-nav-link">À propos</a>
+  <a href="contact.html" class="mobile-nav-link" style="border:none;">Soumission</a>
+  <div style="display:flex;gap:1rem;margin-top:1rem;">
+    <a href="/" class="lang-btn active">FR</a>
+    <a href="en/" class="lang-btn">EN</a>
+  </div>
+</div>
+
+<!-- ── HERO ── -->
+<section id="hero" aria-label="Introduction">
+  <div class="hero-left">
+    <div class="hero-year" aria-hidden="true">40</div>
+    <div class="hero-badge">
+      <i data-lucide="shield-check" aria-hidden="true" style="width:14px;height:14px;"></i>
+      Depuis 1985 — Entreprise familiale
+    </div>
+    <h1 class="hero-title">
+      L'expertise en hottes de<br>
+      cuisine <em>commerciales</em><br>
+      sur la Rive-Sud
+    </h1>
+    <p class="hero-sub">
+      Installation, entretien et réparation de systèmes de ventilation pour restaurants et cuisines commerciales. Conformité aux codes du bâtiment et normes incendie, garantie par 40 ans d'expérience.
+    </p>
+    <div class="hero-stats">
+      <div class="stat-item">
+        <span class="stat-num">40+</span>
+        <span class="stat-label">ans d'expérience</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-num">500+</span>
+        <span class="stat-label">projets réalisés</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-num">RBQ</span>
+        <span class="stat-label">2388-0362-47</span>
+      </div>
+    </div>
+    <div class="hero-cta">
+      <a href="contact.html" class="btn-primary">
+        <i data-lucide="file-text" aria-hidden="true" style="width:16px;height:16px;"></i>
+        Demandez une soumission
+      </a>
+      <a href="realisations.html" class="btn-secondary">
+        <i data-lucide="images" aria-hidden="true" style="width:16px;height:16px;"></i>
+        Voir nos réalisations
+      </a>
+    </div>
+  </div>
+  <div class="hero-right" aria-hidden="true">
+    <img src="images/hero-kitchen.jpg" alt="" loading="eager" fetchpriority="high" width="800" height="1000">
+  </div>
+</section>
+
+<!-- ── TRUST STRIP ── -->
+<div class="trust-strip" role="complementary" aria-label="Certifications et garanties">
+  <div class="trust-item">
+    <i data-lucide="award" aria-hidden="true"></i>
+    Licence RBQ&nbsp;<strong style="color:var(--copper);">2388-0362-47</strong>
+  </div>
+  <div class="trust-item">
+    <i data-lucide="calendar" aria-hidden="true"></i>
+    Fondée en 1985
+  </div>
+  <div class="trust-item">
+    <i data-lucide="users" aria-hidden="true"></i>
+    Entreprise familiale de père en fils
+  </div>
+  <div class="trust-item">
+    <i data-lucide="map-pin" aria-hidden="true"></i>
+    La Prairie, Rive-Sud de Montréal
+  </div>
+  <div class="trust-item">
+    <i data-lucide="clock" aria-hidden="true"></i>
+    Lun–Ven 7h30–16h30
+  </div>
+</div>
+
+<!-- ── SERVICES ── -->
+<section id="services" aria-labelledby="services-title">
+  <div class="services-header">
+    <div>
+      <div class="section-label">Nos spécialités</div>
+      <h2 id="services-title" class="section-title">Ventilation commerciale<br>et résidentielle</h2>
+    </div>
+    <div>
+      <p class="services-desc">
+        De la hotte de restaurant à l'échangeur d'air résidentiel, notre équipe couvre l'ensemble des besoins en ventilation mécanique — avec la rigueur d'une maison fondée en 1985 et la technique d'aujourd'hui.
+      </p>
+      <a href="services.html" class="btn-secondary" style="margin-top:1.5rem;display:inline-flex;">
+        Tous les services
+        <i data-lucide="arrow-right" aria-hidden="true" style="width:16px;height:16px;margin-left:0.5rem;"></i>
+      </a>
+    </div>
+  </div>
+
+  <div class="services-grid" role="list">
+    <article class="service-card reveal" role="listitem">
+      <div class="service-num">01</div>
+      <div class="service-icon"><i data-lucide="flame" aria-hidden="true" style="width:44px;height:44px;"></i></div>
+      <h3 class="service-name">Hottes de restaurant et extraction</h3>
+      <p class="service-desc">Notre spécialité depuis 1985. Installation et entretien de hottes de cuisine commerciales, systèmes d'extraction des fumées et vapeurs, conformité NFPA 96.</p>
+    </article>
+    <article class="service-card reveal" role="listitem">
+      <div class="service-num">02</div>
+      <div class="service-icon"><i data-lucide="building-2" aria-hidden="true" style="width:44px;height:44px;"></i></div>
+      <h3 class="service-name">Unités de toiture</h3>
+      <p class="service-desc">Fourniture, installation et mise en service d'unités de traitement d'air en toiture (RTU) pour commerces, restaurants et bâtiments industriels légers.</p>
+    </article>
+    <article class="service-card reveal" role="listitem">
+      <div class="service-num">03</div>
+      <div class="service-icon"><i data-lucide="thermometer" aria-hidden="true" style="width:44px;height:44px;"></i></div>
+      <h3 class="service-name">Chauffage et climatisation centrale</h3>
+      <p class="service-desc">Systèmes centraux de chauffage à air pulsé et de climatisation pour espaces commerciaux et institutionnels. Remplacement et modernisation d'équipements.</p>
+    </article>
+    <article class="service-card reveal" role="listitem">
+      <div class="service-num">04</div>
+      <div class="service-icon"><i data-lucide="wind" aria-hidden="true" style="width:44px;height:44px;"></i></div>
+      <h3 class="service-name">Thermopompes murales</h3>
+      <p class="service-desc">Installation de thermopompes murales et multi-split pour le confort estival et hivernal. Appareils à haute efficacité énergétique des marques leaders.</p>
+    </article>
+    <article class="service-card reveal" role="listitem">
+      <div class="service-num">05</div>
+      <div class="service-icon"><i data-lucide="refresh-cw" aria-hidden="true" style="width:44px;height:44px;"></i></div>
+      <h3 class="service-name">Échangeurs d'air et VRC</h3>
+      <p class="service-desc">Ventilation résidentielle saine avec échangeurs d'air à récupération de chaleur (VRC). Qualité d'air intérieur améliorée, économies d'énergie garanties.</p>
+    </article>
+    <article class="service-card reveal" role="listitem">
+      <div class="service-num">06</div>
+      <div class="service-icon"><i data-lucide="clipboard-check" aria-hidden="true" style="width:44px;height:44px;"></i></div>
+      <h3 class="service-name">Entretien préventif et contrats</h3>
+      <p class="service-desc">Programmes d'entretien périodique pour hôtels, restaurateurs et gestionnaires d'immeubles. Rapports de conformité, remplacement de filtres, nettoyage de conduits.</p>
+    </article>
+  </div>
+</section>
+
+<!-- ── WHY US ── -->
+<section id="why" aria-labelledby="why-title">
+  <div class="why-grid">
+    <div>
+      <div class="section-label">Pourquoi nous choisir</div>
+      <h2 id="why-title" class="section-title">40 ans de savoir-faire,<br>passé de génération en génération</h2>
+      <div class="why-list">
+        <div class="why-item reveal">
+          <div class="why-icon-box">
+            <i data-lucide="shield-check" aria-hidden="true"></i>
+          </div>
+          <div>
+            <div class="why-item-title">Conformité réglementaire garantie</div>
+            <p class="why-item-desc">Tous nos travaux respectent le Code national du bâtiment, les normes NFPA 96 pour l'extraction de cuisines commerciales, et sont réalisés sous licence RBQ 2388-0362-47.</p>
+          </div>
+        </div>
+        <div class="why-item reveal">
+          <div class="why-icon-box">
+            <i data-lucide="wrench" aria-hidden="true"></i>
+          </div>
+          <div>
+            <div class="why-item-title">Techniciens certifiés et expérimentés</div>
+            <p class="why-item-desc">Notre équipe de mécaniciens de ventilation est formée spécifiquement pour les cuisines commerciales — un contexte technique que peu d'entreprises maîtrisent vraiment.</p>
+          </div>
+        </div>
+        <div class="why-item reveal">
+          <div class="why-icon-box">
+            <i data-lucide="map-pin" aria-hidden="true"></i>
+          </div>
+          <div>
+            <div class="why-item-title">Présence locale, réponse rapide</div>
+            <p class="why-item-desc">Basés à La Prairie, nous couvrons l'ensemble de la Rive-Sud, le Grand Montréal et la Rive-Nord. Déplacement rapide pour les urgences et les appels de service.</p>
+          </div>
+        </div>
+        <div class="why-item reveal">
+          <div class="why-icon-box">
+            <i data-lucide="handshake" aria-hidden="true"></i>
+          </div>
+          <div>
+            <div class="why-item-title">Entreprise familiale depuis 1985</div>
+            <p class="why-item-desc">La confiance ne se fabrique pas, elle se mérite au fil des décennies. Des centaines de restaurateurs et gestionnaires d'immeubles nous font confiance, année après année.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="why-image-block" aria-hidden="true">
+      <img src="images/why-ventilation.jpg" alt="">
+      <div class="why-tag">
+        <span class="why-tag-num">1985</span>
+        <span class="why-tag-text">fondée en</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── PARTNERS ── -->
+<section id="partners" aria-labelledby="partners-title">
+  <div class="section-label">Marques partenaires</div>
+  <h2 id="partners-title" class="section-title" style="font-size:1.5rem;">Équipements des grands fabricants</h2>
+  <div class="partners-strip" role="list" aria-label="Marques partenaires">
+    <span class="partner-name" role="listitem">Daikin</span>
+    <span class="partner-name" role="listitem">Carrier</span>
+    <span class="partner-name" role="listitem">Lennox</span>
+    <span class="partner-name" role="listitem">Honeywell</span>
+    <span class="partner-name" role="listitem">Mitsubishi</span>
+    <span class="partner-name" role="listitem">Greenheck</span>
+    <span class="partner-name" role="listitem">Aaon</span>
+  </div>
+</section>
+
+<!-- ── RÉALISATIONS PREVIEW ── -->
+<section id="realisations-preview" aria-labelledby="real-title">
+  <div class="real-header">
+    <div>
+      <div class="section-label">Portfolio</div>
+      <h2 id="real-title" class="section-title">Nos réalisations</h2>
+    </div>
+    <a href="realisations.html" class="btn-secondary">
+      Voir tous les projets
+      <i data-lucide="arrow-right" aria-hidden="true" style="width:16px;height:16px;margin-left:0.5rem;"></i>
+    </a>
+  </div>
+  <div class="real-grid" role="list">
+    <a href="realisations.html" class="real-card" role="listitem" aria-label="Projet: Hotte commerciale, restaurant Rive-Sud">
+      <img src="images/project-1.jpg" alt="Installation de hotte commerciale dans un restaurant de la Rive-Sud" loading="lazy" width="600" height="800" decoding="async">
+      <div class="real-card-overlay">
+        <div class="real-card-title">Hotte commerciale double îlot</div>
+        <div class="real-card-tag">Restaurant — Rive-Sud</div>
+      </div>
+    </a>
+    <a href="realisations.html" class="real-card" role="listitem" aria-label="Projet: Unité de toiture, bâtiment commercial">
+      <img src="images/project-2.jpg" alt="Installation d'une unité de toiture sur un bâtiment commercial" loading="lazy" width="400" height="300" decoding="async">
+      <div class="real-card-overlay">
+        <div class="real-card-title">Unités de toiture RTU</div>
+        <div class="real-card-tag">Commercial — Brossard</div>
+      </div>
+    </a>
+    <a href="realisations.html" class="real-card" role="listitem" aria-label="Projet: Remplacement VRC résidentiel">
+      <img src="images/project-3.jpg" alt="Installation d'un échangeur d'air résidentiel" loading="lazy" width="400" height="300" decoding="async">
+      <div class="real-card-overlay">
+        <div class="real-card-title">Échangeur d'air VRC</div>
+        <div class="real-card-tag">Résidentiel — La Prairie</div>
+      </div>
+    </a>
+    <a href="realisations.html" class="real-card" role="listitem" aria-label="Projet: Thermopompe murale, logement">
+      <img src="images/project-4.jpg" alt="Installation de thermopompe murale" loading="lazy" width="400" height="300" decoding="async">
+      <div class="real-card-overlay">
+        <div class="real-card-title">Thermopompe murale Daikin</div>
+        <div class="real-card-tag">Résidentiel — Candiac</div>
+      </div>
+    </a>
+    <a href="realisations.html" class="real-card" role="listitem" aria-label="Projet: Système extraction cuisine">
+      <img src="images/project-5.jpg" alt="Système d'extraction pour cuisine industrielle" loading="lazy" width="400" height="300" decoding="async">
+      <div class="real-card-overlay">
+        <div class="real-card-title">Extraction cuisine industrielle</div>
+        <div class="real-card-tag">Institutionnel — Longueuil</div>
+      </div>
+    </a>
+  </div>
+</section>
+
+<!-- ── PORTAL CALLOUT ── -->
+<section id="portal-callout" aria-labelledby="portal-title">
+  <div class="portal-inner">
+    <div>
+      <div class="section-label">Espace client</div>
+      <h2 id="portal-title" class="section-title">Suivez vos contrats<br>d'entretien en ligne</h2>
+      <p style="color:var(--cream-dim);margin:1.25rem 0 2rem;font-size:1rem;line-height:1.75;">
+        Nos clients sous contrat d'entretien ont accès à un portail privé pour consulter l'historique de leurs interventions, leurs prochaines visites planifiées, leur statut de conformité et leurs factures — en temps réel.
+      </p>
+      <div style="display:flex;gap:1rem;flex-wrap:wrap;">
+        <a href="portail.html" class="btn-primary">
+          <i data-lucide="log-in" aria-hidden="true" style="width:16px;height:16px;"></i>
+          Accéder au portail
+        </a>
+        <a href="contact.html" class="btn-secondary">En savoir plus</a>
+      </div>
+    </div>
+    <div class="portal-screen" role="img" aria-label="Aperçu du portail client">
+      <div class="portal-screen-bar">
+        <div class="dot dot-r"></div>
+        <div class="dot dot-y"></div>
+        <div class="dot dot-g"></div>
+        <span style="font-size:0.72rem;color:var(--text-dim);margin-left:0.5rem;font-family:'Space Grotesk',sans-serif;">portail.rsairventilation.com</span>
+      </div>
+      <div class="portal-screen-content">
+        <div style="font-family:'Space Grotesk',sans-serif;font-size:0.78rem;color:var(--text-muted);margin-bottom:0.75rem;">Restaurant Le Provençal</div>
+        <div class="portal-mini-stat">
+          <div class="mini-stat-card">
+            <div class="mini-stat-num">3</div>
+            <div class="mini-stat-lbl">Contrats actifs</div>
+          </div>
+          <div class="mini-stat-card">
+            <div class="mini-stat-num">14 juil.</div>
+            <div class="mini-stat-lbl">Prochaine visite</div>
+          </div>
+        </div>
+        <div class="portal-mini-row">
+          <span class="portal-mini-row-label">Hotte principale — Conforme</span>
+          <span class="portal-mini-badge badge-green">CONFORME</span>
+        </div>
+        <div class="portal-mini-row">
+          <span class="portal-mini-row-label">Nettoyage conduits — Planifié</span>
+          <span class="portal-mini-badge badge-amber">PLANIFIÉ</span>
+        </div>
+        <div class="portal-mini-row">
+          <span class="portal-mini-row-label">Facture mai 2026 — Réglée</span>
+          <span class="portal-mini-badge badge-green">RÉGLÉE</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── CTA BAND ── -->
+<section id="cta-band" aria-labelledby="cta-title">
+  <h2 id="cta-title" class="section-title font-display" style="color:var(--bg);font-size:clamp(1.8rem,3vw,2.5rem);">
+    Prêt à démarrer votre projet de ventilation?
+  </h2>
+  <p>Que ce soit une nouvelle installation, un remplacement d'équipement ou un contrat d'entretien, notre équipe est disponible pour vous conseiller et vous remettre une soumission sans frais.</p>
+  <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
+    <a href="contact.html" class="btn-dark">
+      <i data-lucide="file-text" aria-hidden="true" style="width:16px;height:16px;"></i>
+      Demandez une soumission gratuite
+    </a>
+    <a href="tel:+14502322800" class="btn-dark" style="background:transparent;border:2px solid rgba(28,20,16,0.3);color:var(--bg);">
+      <i data-lucide="phone" aria-hidden="true" style="width:16px;height:16px;"></i>
+      (450) 232-2800
+    </a>
+  </div>
+</section>
+
+<!-- ── FOOTER ── -->
+<footer>
+  <div class="footer-grid">
+    <div>
+      <div class="footer-brand-name">Ventilation R.S. Air Inc.</div>
+      <p class="footer-brand-tag">
+        Spécialistes de la ventilation commerciale et résidentielle depuis 1985. Entreprise familiale établie à La Prairie, Rive-Sud de Montréal.
+      </p>
+      <div class="footer-contact-item">
+        <i data-lucide="map-pin" aria-hidden="true"></i>
+        40, rue des Galets, La Prairie QC J5R 5A8
+      </div>
+      <div class="footer-contact-item">
+        <i data-lucide="phone" aria-hidden="true"></i>
+        <a href="tel:+14502322800" style="color:inherit;text-decoration:none;">(450) 232-2800</a>
+      </div>
+      <div class="footer-contact-item">
+        <i data-lucide="mail" aria-hidden="true"></i>
+        <a href="mailto:info@rsairventilation.com" style="color:inherit;text-decoration:none;">info@rsairventilation.com</a>
+      </div>
+      <div class="footer-contact-item">
+        <i data-lucide="clock" aria-hidden="true"></i>
+        Lun–Ven : 7h30–16h30
+      </div>
+    </div>
+    <div>
+      <div class="footer-col-title">Services</div>
+      <a href="services.html#hottes" class="footer-link">Hottes de restaurant</a>
+      <a href="services.html#toiture" class="footer-link">Unités de toiture</a>
+      <a href="services.html#chauffage" class="footer-link">Chauffage central</a>
+      <a href="services.html#thermopompes" class="footer-link">Thermopompes murales</a>
+      <a href="services.html#vrc" class="footer-link">Échangeurs d'air</a>
+      <a href="services.html#entretien" class="footer-link">Entretien préventif</a>
+    </div>
+    <div>
+      <div class="footer-col-title">Entreprise</div>
+      <a href="a-propos.html" class="footer-link">À propos</a>
+      <a href="realisations.html" class="footer-link">Réalisations</a>
+      <a href="contact.html" class="footer-link">Contact</a>
+      <a href="portail.html" class="footer-link">Portail client</a>
+    </div>
+    <div>
+      <div class="footer-col-title">Zone de service</div>
+      <p style="font-size:0.85rem;color:var(--text-muted);line-height:1.7;">
+        La Prairie · Brossard · Saint-Lambert · Longueuil · Boucherville · Sainte-Julie · Varennes · Candiac · Saint-Constant · Grand Montréal
+      </p>
+      <div style="margin-top:1.5rem;">
+        <div class="rbq-badge">
+          <i data-lucide="award" aria-hidden="true" style="width:12px;height:12px;"></i>
+          RBQ 2388-0362-47
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span class="footer-copy">© 2026 Ventilation R.S. Air Inc. Tous droits réservés.</span>
+    <div style="display:flex;gap:1.5rem;align-items:center;">
+      <a href="en/" class="footer-link" style="margin:0;font-size:0.78rem;">English</a>
+      <a href="sitemap.xml" class="footer-link" style="margin:0;font-size:0.78rem;">Plan du site</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Init Lucide icons
+  lucide.createIcons();
+
+  // Nav scroll state
+  const nav = document.getElementById('nav-pill');
+  window.addEventListener('scroll', () => {
+    nav.classList.toggle('scrolled', window.scrollY > 60);
+  });
+
+  // Reveal on scroll
+  gsap.registerPlugin(ScrollTrigger);
+  document.querySelectorAll('.reveal').forEach(el => {
+    gsap.fromTo(el,
+      { opacity: 0, y: 32 },
+      {
+        opacity: 1, y: 0, duration: 0.75, ease: 'power2.out',
+        scrollTrigger: { trigger: el, start: 'top 88%', once: true }
+      }
+    );
+  });
+
+  // Hero entrance
+  gsap.timeline({ defaults: { ease: 'power3.out' }})
+    .from('.hero-badge', { opacity: 0, y: 20, duration: 0.6, delay: 0.2 })
+    .from('.hero-title', { opacity: 0, y: 30, duration: 0.8 }, '-=0.3')
+    .from('.hero-sub', { opacity: 0, y: 20, duration: 0.6 }, '-=0.4')
+    .from('.hero-stats', { opacity: 0, y: 16, duration: 0.5 }, '-=0.3')
+    .from('.hero-cta', { opacity: 0, y: 16, duration: 0.5 }, '-=0.3');
+</script>
+<noscript><style>.reveal{opacity:1!important;transform:none!important;}</style></noscript>
+<script>/* reveal failsafe: never leave content stuck hidden if the GSAP CDN fails to load */
+(function(){if(typeof gsap==='undefined'||typeof ScrollTrigger==='undefined'){document.querySelectorAll('.reveal').forEach(function(e){e.style.opacity='1';e.style.transform='none';});}})();</script>
+</body>
+</html>

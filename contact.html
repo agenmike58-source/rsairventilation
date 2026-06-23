@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="fr-CA">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact et soumission — Ventilation R.S. Air Inc. | La Prairie, Rive-Sud</title>
+  <meta name="description" content="Demandez une soumission gratuite pour vos besoins en ventilation commerciale ou résidentielle. Joignez Ventilation R.S. Air à La Prairie — (450) 232-2800 — Lun-Ven 7h30-16h30.">
+  <link rel="canonical" href="https://www.rsairventilation.com/contact.html">
+  <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+  <link rel="manifest" href="site.webmanifest">
+  <meta name="theme-color" content="#1c1410">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.rsairventilation.com/contact.html">
+  <meta property="og:title" content="Contact — Ventilation R.S. Air Inc.">
+  <meta property="og:description" content="Soumission gratuite pour vos projets de ventilation. La Prairie, Rive-Sud de Montréal.">
+  <meta property="og:image" content="https://www.rsairventilation.com/images/og-image.png">
+  <meta property="og:locale" content="fr_CA">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://www.rsairventilation.com/images/og-image.png">
+  <link rel="alternate" hreflang="fr-CA" href="https://www.rsairventilation.com/contact.html">
+  <link rel="alternate" hreflang="en-CA" href="https://www.rsairventilation.com/en/contact.html">
+  <link rel="alternate" hreflang="x-default" href="https://www.rsairventilation.com/contact.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js"></script>
+
+  <style>
+    :root {
+      --bg:#1c1410;--surface:#241a13;--card:#2e2218;--card-hover:#382a1f;
+      --border:#3d2e22;--copper:#b87333;--copper-lt:#d4904a;--copper-dim:#8a5520;
+      --cream:#f0e8d8;--cream-dim:#c8bca8;--text:#f0e8d8;--text-muted:#9a8a78;--text-dim:#6a5a4a;
+    }
+    html{scroll-behavior:smooth;}
+    body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--text);overflow-x:hidden;}
+    .font-display{font-family:'Space Grotesk',sans-serif;}
+
+    #nav-pill{position:fixed;top:1.5rem;left:50%;transform:translateX(-50%);z-index:100;background:rgba(28,20,16,0.6);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border:1px solid var(--border);border-radius:9999px;padding:0.5rem 1.25rem;display:flex;align-items:center;gap:0;transition:background 0.3s,border-color 0.3s;white-space:nowrap;}
+    #nav-pill.scrolled{background:rgba(28,20,16,0.95);border-color:var(--copper-dim);}
+    .nav-link{font-family:'Space Grotesk',sans-serif;font-size:0.82rem;font-weight:500;letter-spacing:0.03em;color:var(--cream-dim);padding:0.4rem 0.85rem;border-radius:9999px;text-decoration:none;transition:color 0.2s,background 0.2s;}
+    .nav-link:hover,.nav-link.active{color:var(--cream);background:rgba(184,115,51,0.15);}
+    .nav-cta{background:var(--copper);color:var(--bg)!important;font-weight:600;margin-left:0.5rem;}
+    .nav-cta:hover{background:var(--copper-lt)!important;}
+    .nav-logo{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:0.9rem;color:var(--cream);margin-right:0.75rem;}
+    .nav-logo span{color:var(--copper);}
+    .nav-sep{width:1px;height:18px;background:var(--border);margin:0 0.25rem;}
+    .lang-btn{font-family:'Space Grotesk',sans-serif;font-size:0.75rem;font-weight:600;letter-spacing:0.05em;padding:0.25rem 0.5rem;border-radius:4px;text-decoration:none;transition:all 0.2s;}
+    .lang-btn.active{color:var(--copper);background:rgba(184,115,51,0.12);}
+    .lang-btn:not(.active){color:var(--text-muted);}
+    #mobile-menu{display:none;position:fixed;inset:0;z-index:99;background:var(--bg);padding:5rem 2rem 2rem;flex-direction:column;gap:1.5rem;}
+    #mobile-menu.open{display:flex;}
+    .mobile-nav-link{font-family:'Space Grotesk',sans-serif;font-size:1.5rem;font-weight:600;color:var(--cream-dim);text-decoration:none;border-bottom:1px solid var(--border);padding-bottom:1.25rem;}
+    #hamburger{display:none;background:none;border:none;cursor:pointer;color:var(--cream);margin-left:0.5rem;}
+    @media(max-width:900px){#nav-links{display:none;}#hamburger{display:flex;}#nav-pill{padding:0.5rem 1rem;}}
+
+    .page-header{padding:9rem 5rem 4rem;background:var(--surface);border-bottom:1px solid var(--border);}
+    .section-label{font-family:'Space Grotesk',sans-serif;font-size:0.72rem;font-weight:600;letter-spacing:0.15em;text-transform:uppercase;color:var(--copper);margin-bottom:0.75rem;display:flex;align-items:center;gap:0.75rem;}
+    .section-label::after{content:'';display:block;width:30px;height:1px;background:var(--copper-dim);}
+    .page-title{font-family:'Space Grotesk',sans-serif;font-size:clamp(2.5rem,5vw,3.25rem);font-weight:700;color:var(--cream);letter-spacing:-0.02em;line-height:1.1;margin-bottom:1rem;}
+    .page-title em{font-style:normal;color:var(--copper);}
+
+    /* Main layout */
+    .contact-layout{display:grid;grid-template-columns:1fr 2fr;min-height:70vh;}
+
+    /* Left info panel */
+    .contact-info{background:var(--surface);border-right:1px solid var(--border);padding:4rem 3rem;}
+    .info-block{margin-bottom:3rem;}
+    .info-block-title{font-family:'Space Grotesk',sans-serif;font-size:0.75rem;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:var(--copper);margin-bottom:1.25rem;}
+    .info-item{display:flex;align-items:flex-start;gap:0.75rem;margin-bottom:1.25rem;}
+    .info-item-icon{width:36px;height:36px;background:rgba(184,115,51,0.1);border:1px solid var(--copper-dim);border-radius:6px;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+    .info-item-icon i{color:var(--copper);width:16px;height:16px;}
+    .info-item-label{font-family:'Space Grotesk',sans-serif;font-size:0.72rem;font-weight:600;color:var(--text-dim);text-transform:uppercase;letter-spacing:0.08em;margin-bottom:0.2rem;}
+    .info-item-val{font-size:0.9rem;color:var(--cream-dim);line-height:1.5;}
+    .info-item-val a{color:var(--cream-dim);text-decoration:none;transition:color 0.2s;}
+    .info-item-val a:hover{color:var(--copper-lt);}
+
+    .hours-grid{display:grid;grid-template-columns:1fr 1fr;gap:0.25rem;}
+    .hours-row{font-size:0.83rem;color:var(--text-muted);padding:0.3rem 0;}
+    .hours-row.today{color:var(--cream-dim);}
+    .hours-day{color:var(--text-dim);}
+
+    .rbq-card{background:rgba(184,115,51,0.06);border:1px solid var(--copper-dim);border-radius:6px;padding:1rem;display:flex;align-items:center;gap:0.75rem;}
+    .rbq-card i{color:var(--copper);width:20px;height:20px;flex-shrink:0;}
+    .rbq-label{font-family:'Space Grotesk',sans-serif;font-size:0.72rem;font-weight:600;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.08em;}
+    .rbq-num{font-family:'Space Grotesk',sans-serif;font-size:0.95rem;font-weight:700;color:var(--copper-lt);}
+
+    /* Right form panel */
+    .contact-form-panel{padding:4rem 5rem;background:var(--bg);}
+    .form-title{font-family:'Space Grotesk',sans-serif;font-size:1.6rem;font-weight:700;color:var(--cream);letter-spacing:-0.02em;margin-bottom:0.5rem;}
+    .form-sub{font-size:0.9rem;color:var(--text-muted);margin-bottom:2.5rem;line-height:1.65;}
+
+    .form-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.25rem;}
+    .form-group{display:flex;flex-direction:column;gap:0.4rem;}
+    .form-group.full{grid-column:span 2;}
+    label{font-family:'Space Grotesk',sans-serif;font-size:0.8rem;font-weight:500;color:var(--cream-dim);letter-spacing:0.02em;}
+    label span{color:var(--copper);}
+    input,select,textarea{background:var(--surface);border:1px solid var(--border);border-radius:6px;padding:0.75rem 1rem;font-family:'DM Sans',sans-serif;font-size:0.9rem;color:var(--cream);outline:none;transition:border-color 0.2s,box-shadow 0.2s;width:100%;}
+    input::placeholder,textarea::placeholder{color:var(--text-dim);}
+    input:focus,select:focus,textarea:focus{border-color:var(--copper);box-shadow:0 0 0 3px rgba(184,115,51,0.12);}
+    select option{background:var(--card);}
+    textarea{resize:vertical;min-height:120px;}
+    .form-note{font-size:0.78rem;color:var(--text-dim);grid-column:span 2;margin-top:0.25rem;}
+
+    .btn-submit{display:flex;align-items:center;justify-content:center;gap:0.6rem;background:var(--copper);color:var(--bg);font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:0.95rem;padding:0.9rem 2rem;border-radius:6px;border:none;cursor:pointer;transition:background 0.2s,transform 0.15s;width:100%;margin-top:1.5rem;}
+    .btn-submit:hover{background:var(--copper-lt);transform:translateY(-1px);}
+    .btn-submit:disabled{opacity:0.6;cursor:not-allowed;transform:none;}
+
+    /* Success state */
+    .form-success{display:none;text-align:center;padding:3rem 2rem;}
+    .form-success.show{display:block;}
+    .success-icon{width:56px;height:56px;background:rgba(39,174,96,0.12);border:1px solid rgba(39,174,96,0.3);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 1.5rem;}
+    .success-icon i{color:#27ae60;width:24px;height:24px;}
+    .success-title{font-family:'Space Grotesk',sans-serif;font-size:1.4rem;font-weight:700;color:var(--cream);margin-bottom:0.75rem;}
+    .success-text{font-size:0.9rem;color:var(--cream-dim);line-height:1.7;max-width:400px;margin:0 auto;}
+
+    footer{background:var(--surface);border-top:1px solid var(--border);padding:4rem 5rem 2rem;}
+    .footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:3rem;margin-bottom:3rem;}
+    .footer-col-title{font-family:'Space Grotesk',sans-serif;font-size:0.78rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--copper);margin-bottom:1.25rem;}
+    .footer-link{display:block;font-size:0.875rem;color:var(--text-muted);text-decoration:none;margin-bottom:0.6rem;transition:color 0.2s;}
+    .footer-link:hover{color:var(--cream);}
+    .footer-contact-item{display:flex;align-items:flex-start;gap:0.6rem;font-size:0.85rem;color:var(--text-muted);margin-bottom:0.75rem;line-height:1.5;}
+    .footer-contact-item i{color:var(--copper);flex-shrink:0;margin-top:2px;width:14px;height:14px;}
+    .footer-bottom{border-top:1px solid var(--border);padding-top:1.5rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:0.75rem;}
+    .footer-copy{font-size:0.78rem;color:var(--text-dim);}
+    .rbq-badge{display:inline-flex;align-items:center;gap:0.5rem;background:rgba(184,115,51,0.08);border:1px solid var(--copper-dim);border-radius:4px;padding:0.35rem 0.75rem;font-family:'Space Grotesk',sans-serif;font-size:0.72rem;font-weight:600;color:var(--copper-lt);letter-spacing:0.05em;}
+
+    @media(max-width:1024px){
+      .page-header{padding:7rem 2rem 3rem;}
+      .contact-layout{grid-template-columns:1fr;}
+      .contact-info{border-right:none;border-bottom:1px solid var(--border);padding:3rem 2rem;}
+      .contact-form-panel{padding:3rem 2rem;}
+      footer{padding:3rem 2rem 1.5rem;}
+      .footer-grid{grid-template-columns:1fr 1fr;gap:2rem;}
+    }
+    @media(max-width:640px){
+      .form-grid{grid-template-columns:1fr;}
+      .form-group.full{grid-column:auto;}
+      .form-note{grid-column:auto;}
+      .footer-grid{grid-template-columns:1fr;}
+    }
+  </style>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ContactPage",
+    "name": "Contact — Ventilation R.S. Air Inc.",
+    "url": "https://www.rsairventilation.com/contact.html",
+    "description": "Demandez une soumission gratuite pour vos projets de ventilation commerciale ou résidentielle sur la Rive-Sud.",
+    "mainEntity": {
+      "@type": "LocalBusiness",
+      "name": "Ventilation R.S. Air Inc.",
+      "telephone": "+14502322800",
+      "email": "info@rsairventilation.com",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "40, rue des Galets",
+        "addressLocality": "La Prairie",
+        "addressRegion": "QC",
+        "postalCode": "J5R 5A8",
+        "addressCountry": "CA"
+      },
+      "openingHoursSpecification": [{
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+        "opens": "07:30",
+        "closes": "16:30"
+      }]
+    }
+  }
+  </script>
+</head>
+<body>
+
+<nav id="nav-pill" role="navigation" aria-label="Navigation principale">
+  <a href="index.html" class="nav-logo">RS<span>AIR</span></a>
+  <div class="nav-sep"></div>
+  <div id="nav-links" style="display:flex;align-items:center;gap:0;">
+    <a href="index.html" class="nav-link">Accueil</a>
+    <a href="services.html" class="nav-link">Services</a>
+    <a href="realisations.html" class="nav-link">Réalisations</a>
+    <a href="a-propos.html" class="nav-link">À propos</a>
+    <a href="contact.html" class="nav-link nav-cta active" style="background:var(--copper);">Soumission</a>
+  </div>
+  <div style="display:flex;align-items:center;gap:0.25rem;margin-left:0.75rem;">
+    <div class="nav-sep"></div>
+    <a href="contact.html" class="lang-btn active" style="margin-left:0.5rem;">FR</a>
+    <a href="en/contact.html" class="lang-btn">EN</a>
+  </div>
+  <button id="hamburger" aria-label="Menu" onclick="document.getElementById('mobile-menu').classList.toggle('open')">
+    <i data-lucide="menu" aria-hidden="true" style="width:22px;height:22px;"></i>
+  </button>
+</nav>
+
+<div id="mobile-menu">
+  <button onclick="document.getElementById('mobile-menu').classList.remove('open')" style="position:absolute;top:1.5rem;right:1.5rem;background:none;border:none;color:var(--cream);cursor:pointer;">
+    <i data-lucide="x" aria-hidden="true" style="width:24px;height:24px;"></i>
+  </button>
+  <a href="index.html" class="mobile-nav-link">Accueil</a>
+  <a href="services.html" class="mobile-nav-link">Services</a>
+  <a href="realisations.html" class="mobile-nav-link">Réalisations</a>
+  <a href="a-propos.html" class="mobile-nav-link">À propos</a>
+  <a href="contact.html" class="mobile-nav-link" style="border:none;">Soumission</a>
+</div>
+
+<header class="page-header">
+  <div class="page-breadcrumb" style="font-family:'Space Grotesk',sans-serif;font-size:0.75rem;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;color:var(--text-dim);margin-bottom:1.25rem;display:flex;align-items:center;gap:0.5rem;">
+    <a href="index.html" style="color:var(--text-dim);text-decoration:none;">Accueil</a>
+    <i data-lucide="chevron-right" aria-hidden="true" style="width:12px;height:12px;"></i>
+    Contact
+  </div>
+  <h1 class="page-title">Demandez une <em>soumission</em><br>sans frais</h1>
+  <p style="font-size:1rem;color:var(--cream-dim);margin-top:0.75rem;max-width:520px;line-height:1.7;">Remplissez le formulaire ou appelez-nous directement. Nous vous répondons dans les 24 heures ouvrables.</p>
+</header>
+
+<div class="contact-layout">
+
+  <!-- Info panel -->
+  <aside class="contact-info" aria-label="Coordonnées">
+    <div class="info-block">
+      <div class="info-block-title">Nous joindre</div>
+      <div class="info-item">
+        <div class="info-item-icon"><i data-lucide="phone" aria-hidden="true"></i></div>
+        <div>
+          <div class="info-item-label">Téléphone</div>
+          <div class="info-item-val"><a href="tel:+14502322800">(450) 232-2800</a></div>
+        </div>
+      </div>
+      <div class="info-item">
+        <div class="info-item-icon"><i data-lucide="mail" aria-hidden="true"></i></div>
+        <div>
+          <div class="info-item-label">Courriel</div>
+          <div class="info-item-val"><a href="mailto:info@rsairventilation.com">info@rsairventilation.com</a></div>
+        </div>
+      </div>
+      <div class="info-item">
+        <div class="info-item-icon"><i data-lucide="map-pin" aria-hidden="true"></i></div>
+        <div>
+          <div class="info-item-label">Adresse</div>
+          <div class="info-item-val">40, rue des Galets<br>La Prairie QC J5R 5A8</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="info-block">
+      <div class="info-block-title">Heures d'ouverture</div>
+      <div class="hours-grid" role="list" aria-label="Heures d'ouverture">
+        <div class="hours-row today" role="listitem"><span class="hours-day">Lundi</span></div>
+        <div class="hours-row today" role="listitem">7h30 – 16h30</div>
+        <div class="hours-row" role="listitem"><span class="hours-day">Mardi</span></div>
+        <div class="hours-row" role="listitem">7h30 – 16h30</div>
+        <div class="hours-row" role="listitem"><span class="hours-day">Mercredi</span></div>
+        <div class="hours-row" role="listitem">7h30 – 16h30</div>
+        <div class="hours-row" role="listitem"><span class="hours-day">Jeudi</span></div>
+        <div class="hours-row" role="listitem">7h30 – 16h30</div>
+        <div class="hours-row" role="listitem"><span class="hours-day">Vendredi</span></div>
+        <div class="hours-row" role="listitem">7h30 – 16h30</div>
+        <div class="hours-row" role="listitem"><span class="hours-day">Samedi</span></div>
+        <div class="hours-row" role="listitem" style="color:var(--text-dim);">Fermé</div>
+        <div class="hours-row" role="listitem"><span class="hours-day">Dimanche</span></div>
+        <div class="hours-row" role="listitem" style="color:var(--text-dim);">Fermé</div>
+      </div>
+    </div>
+
+    <div class="info-block">
+      <div class="info-block-title">Zone de service</div>
+      <p style="font-size:0.85rem;color:var(--text-muted);line-height:1.7;">Rive-Sud de Montréal, Grand Montréal, Rive-Nord. Déplacement pour soumission sans frais dans notre zone principale.</p>
+    </div>
+
+    <div class="rbq-card">
+      <i data-lucide="award" aria-hidden="true"></i>
+      <div>
+        <div class="rbq-label">Licence RBQ</div>
+        <div class="rbq-num">2388-0362-47</div>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Form panel -->
+  <main class="contact-form-panel">
+    <div id="form-wrapper">
+      <h2 class="form-title">Formulaire de soumission</h2>
+      <p class="form-sub">Décrivez votre projet et nous vous recontacterons rapidement avec une évaluation personnalisée. Tous les champs marqués d'un <span style="color:var(--copper);">*</span> sont requis.</p>
+
+      <form id="contact-form" novalidate>
+        <div class="form-grid">
+          <div class="form-group">
+            <label for="prenom">Prénom <span>*</span></label>
+            <input type="text" id="prenom" name="prenom" placeholder="Jean" required autocomplete="given-name">
+          </div>
+          <div class="form-group">
+            <label for="nom">Nom <span>*</span></label>
+            <input type="text" id="nom" name="nom" placeholder="Tremblay" required autocomplete="family-name">
+          </div>
+          <div class="form-group">
+            <label for="email">Courriel <span>*</span></label>
+            <input type="email" id="email" name="email" placeholder="jean@example.com" required autocomplete="email">
+          </div>
+          <div class="form-group">
+            <label for="telephone">Téléphone <span>*</span></label>
+            <input type="tel" id="telephone" name="telephone" placeholder="(450) 000-0000" required autocomplete="tel">
+          </div>
+          <div class="form-group">
+            <label for="entreprise">Entreprise / Restaurant</label>
+            <input type="text" id="entreprise" name="entreprise" placeholder="Nom de votre établissement" autocomplete="organization">
+          </div>
+          <div class="form-group">
+            <label for="ville">Ville <span>*</span></label>
+            <input type="text" id="ville" name="ville" placeholder="La Prairie" required>
+          </div>
+          <div class="form-group full">
+            <label for="service">Type de service requis <span>*</span></label>
+            <select id="service" name="service" required>
+              <option value="" disabled selected>Sélectionnez un service…</option>
+              <option value="hotte">Hotte de restaurant / extraction</option>
+              <option value="toiture">Unité de toiture (RTU)</option>
+              <option value="chauffage">Chauffage et climatisation centrale</option>
+              <option value="thermopompe">Thermopompe murale</option>
+              <option value="vrc">Échangeur d'air (VRC)</option>
+              <option value="entretien">Contrat d'entretien préventif</option>
+              <option value="urgence">Appel de service / urgence</option>
+              <option value="autre">Autre</option>
+            </select>
+          </div>
+          <div class="form-group full">
+            <label for="message">Description du projet <span>*</span></label>
+            <textarea id="message" name="message" placeholder="Décrivez brièvement votre projet : type de bâtiment, superficie approximative, équipement existant, délai souhaité…" required></textarea>
+          </div>
+          <p class="form-note">Vos informations sont utilisées uniquement pour répondre à votre demande et ne seront jamais partagées avec des tiers.</p>
+        </div>
+        <div id="form-error" style="display:none;background:rgba(192,57,43,0.12);border:1px solid rgba(192,57,43,0.3);border-radius:6px;padding:0.75rem 1rem;font-size:0.85rem;color:#e07070;margin-top:1rem;"></div>
+        <button type="submit" class="btn-submit" id="submit-btn">
+          <i data-lucide="send" aria-hidden="true" style="width:16px;height:16px;"></i>
+          Envoyer ma demande de soumission
+        </button>
+      </form>
+    </div>
+
+    <!-- Success state -->
+    <div class="form-success" id="form-success" aria-live="polite">
+      <div class="success-icon">
+        <i data-lucide="check" aria-hidden="true"></i>
+      </div>
+      <h2 class="success-title">Demande envoyée avec succès</h2>
+      <p class="success-text">Merci pour votre intérêt. Notre équipe examinera votre demande et vous recontactera dans les 24 heures ouvrables pour discuter de votre projet.</p>
+      <div style="margin-top:2rem;display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
+        <a href="index.html" style="display:inline-flex;align-items:center;gap:0.5rem;background:var(--copper);color:var(--bg);font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:0.875rem;padding:0.75rem 1.5rem;border-radius:6px;text-decoration:none;">
+          <i data-lucide="home" aria-hidden="true" style="width:14px;height:14px;"></i>
+          Retour à l'accueil
+        </a>
+        <a href="services.html" style="display:inline-flex;align-items:center;gap:0.5rem;background:transparent;color:var(--cream-dim);font-family:'Space Grotesk',sans-serif;font-weight:500;font-size:0.875rem;padding:0.75rem 1.5rem;border-radius:6px;border:1px solid var(--border);text-decoration:none;">
+          Voir nos services
+        </a>
+      </div>
+    </div>
+  </main>
+</div>
+
+<footer>
+  <div class="footer-grid">
+    <div>
+      <div style="font-family:'Space Grotesk',sans-serif;font-size:1.05rem;font-weight:700;color:var(--cream);margin-bottom:0.5rem;">Ventilation R.S. Air Inc.</div>
+      <p style="font-size:0.82rem;color:var(--text-muted);margin-bottom:1.25rem;line-height:1.6;">Ventilation commerciale et résidentielle depuis 1985. Rive-Sud de Montréal.</p>
+      <div class="footer-contact-item"><i data-lucide="map-pin" aria-hidden="true"></i>40, rue des Galets, La Prairie QC J5R 5A8</div>
+      <div class="footer-contact-item"><i data-lucide="phone" aria-hidden="true"></i><a href="tel:+14502322800" style="color:inherit;text-decoration:none;">(450) 232-2800</a></div>
+      <div class="footer-contact-item"><i data-lucide="mail" aria-hidden="true"></i><a href="mailto:info@rsairventilation.com" style="color:inherit;text-decoration:none;">info@rsairventilation.com</a></div>
+    </div>
+    <div>
+      <div class="footer-col-title">Services</div>
+      <a href="services.html#hottes" class="footer-link">Hottes de restaurant</a>
+      <a href="services.html#toiture" class="footer-link">Unités de toiture</a>
+      <a href="services.html#thermopompes" class="footer-link">Thermopompes</a>
+      <a href="services.html#entretien" class="footer-link">Entretien préventif</a>
+    </div>
+    <div>
+      <div class="footer-col-title">Entreprise</div>
+      <a href="a-propos.html" class="footer-link">À propos</a>
+      <a href="realisations.html" class="footer-link">Réalisations</a>
+      <a href="contact.html" class="footer-link">Contact</a>
+      <a href="portail.html" class="footer-link">Portail client</a>
+    </div>
+    <div>
+      <div class="footer-col-title">Certification</div>
+      <div class="rbq-badge"><i data-lucide="award" aria-hidden="true" style="width:12px;height:12px;"></i>RBQ 2388-0362-47</div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span class="footer-copy">© 2026 Ventilation R.S. Air Inc.</span>
+    <a href="en/contact.html" class="footer-link" style="margin:0;font-size:0.78rem;">English</a>
+  </div>
+</footer>
+
+<script>
+  lucide.createIcons();
+  const nav = document.getElementById('nav-pill');
+  window.addEventListener('scroll', () => nav.classList.toggle('scrolled', window.scrollY > 60));
+
+  const form = document.getElementById('contact-form');
+  const submitBtn = document.getElementById('submit-btn');
+  const errBox = document.getElementById('form-error');
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    errBox.style.display = 'none';
+
+    const required = form.querySelectorAll('[required]');
+    let valid = true;
+    required.forEach(field => {
+      if (!field.value.trim()) {
+        field.style.borderColor = 'rgba(192,57,43,0.6)';
+        valid = false;
+      } else {
+        field.style.borderColor = '';
+      }
+    });
+
+    if (!valid) {
+      errBox.textContent = 'Veuillez remplir tous les champs obligatoires.';
+      errBox.style.display = 'block';
+      return;
+    }
+
+    submitBtn.disabled = true;
+    submitBtn.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="animation:spin 1s linear infinite;"><path d="M21 12a9 9 0 1 1-6.219-8.56"/></svg> Envoi en cours…';
+
+    // Simulate submission delay
+    await new Promise(r => setTimeout(r, 1500));
+
+    document.getElementById('form-wrapper').style.display = 'none';
+    const success = document.getElementById('form-success');
+    success.classList.add('show');
+    lucide.createIcons();
+  });
+
+  // Clear error styling on input
+  form.querySelectorAll('input, select, textarea').forEach(el => {
+    el.addEventListener('input', () => { el.style.borderColor = ''; });
+  });
+</script>
+<style>
+  @keyframes spin { to { transform: rotate(360deg); } }
+</style>
+</body>
+</html>
